@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/zira.png" />
+<meta charset="utf-8" />
+<title>Обновление Zira CMS</title>
+<meta name="keywords" content="zira cms, обновление, мастер, бэкап" />
+<meta name="description" content="Некоторые релизы Zira CMS требуют обновления базы данных. В этих случаях нужно запустить мастер обновления." />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
+</head>
+<body class="page">
+<div id="main-container-wrapper"><div id="main-container">
+<header>
+<div class="container">
+<div class="row">
+<ul id="user-menu" class="not-authorized usermenu-popup">
+<li class="menu-item">
+<a href="https://github.com/ziracms/zira" class="menu-link"> Скачать</a>
+</li>
+</ul>
+<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira</span></a><p id="site-slogan"><span>CMS с оконным интерфейсом</span></p></div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row">
+<div id="content" class="col-sm-8">
+<main>
+<article>
+<div class="page-header">
+<h1>Обновление Zira CMS</h1>
+</div>
+<div class="article parse-content">
+<p>Некоторые релизы <strong>Zira CMS</strong> требуют обновления базы данных. В этих случаях нужно запустить мастер обновления.</p>
+<p>Перед тем, как запустить мастер обновления обязательно нужно сделать полный бэкап сайта, включая снятие дампа базы данных. Дамп базы данных можно снять, если открыть окно "Система" и выбрать соответствующий пункт меню, либо воспользоваться другими инструментами, такими как phpmyadmin.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>В случае, неудачного обновления, базу данных нужно будет восстановить из бэкапа через phpmyadmin, либо любой другой инструмент для работы с базой данных.</p>
+</blockquote>
+<p>После того, как вы сделаете полный бэкап сайта, нужно в первую очередь загрузить на сервер содержимое архива нового релиза системы.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Во время обновления системы, на сайте могут появляться ошибки. Если вы хотите, скрыть их от пользователей, то временно удалите, либо переименуйте файл <strong>index.php</strong>.</p>
+</blockquote>
+<p>Далее нужно запустить мастер обновления Zira CMS. Для этого нужно открыть страницу "/update", либо "/update/index.php"<em>.</em></p>
+<p>В целях безопасности, мастер обновления защищён от запуска. Чтобы запустить его, вам нужно удалить, либо переименовать файл <strong>.forbidden</strong> в папке <strong>update</strong>. После этого, вы сможете запустить обновление базы данных системы.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Не закрывайте страницу обновления до того, как процесс обновления не будет завершен!</p>
+</blockquote>
+<blockquote>
+<p>По завершению процесса обновления не забудьте удалить папку <strong>update</strong>, либо восстановить файл <strong>.forbidden</strong></p>
+</blockquote>
+<p>После завершения обновления базы данных, автоматически будет очищено содержимое папки <strong>cache</strong>!</p>
+<p>Рекомендуется также очистить кэш страницы в браузере (Ctrl + F5 / Shift + F5).</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Иногда новый релиз вносит изменения в файл <strong>.htaccess</strong>. В этих случаях требуется переименовать файл <strong>htaccess.txt</strong> в <strong>.htaccess</strong> и загрузить его на сервер.</p>
+</blockquote>
+<p>Следует иметь в виду, что не все релизы требуют обновления базы данных и файла .htaccess. Если новый релиз не вносит изменений в базу данных, то запускать мастер обновления не требуется. В этих случаях, достаточно загрузить содержимое архива и очистить кэш.</p>
+<p>Какие именно изменения были внесены вы можете узнать в новостях.</p>
+<p>Если вы удалили или переименовали файл <strong>index.php</strong>, то после того, как обновление будет завершено, его нужно будет восстановить.</p>
+<p>Удачного обновления!</p>
+</div>
+</article>
+</main>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div id="footer-menu-wrapper">
+<p>Zira CMS - бесплатная система управления сайтом.</p>
+</div>
+</div>
+</div>
+</footer>
+</div></div><!--/main-container-wrapper-->
+<a href="javascript:void(0)" class="scroll-top" title="Наверх"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/zira.js"></script>
+<script src="/assets/js/lightbox.min.js"></script>
+</body>
+</html>

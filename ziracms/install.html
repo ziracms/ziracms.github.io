@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/zira.png" />
+<meta charset="utf-8" />
+<title>Установка Zira CMS</title>
+<meta name="keywords" content="zira, cms, установка, бесплатно, лицензия, сервер" />
+<meta name="description" content="Для того, чтобы установить Zira CMS необходимо для начала загрузить файлы из распакованного архива в корневую директорию сайта. " />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
+</head>
+<body class="page">
+<div id="main-container-wrapper"><div id="main-container">
+<header>
+<div class="container">
+<div class="row">
+<ul id="user-menu" class="not-authorized usermenu-popup">
+<li class="menu-item">
+<a href="https://github.com/ziracms/zira" class="menu-link"> Скачать</a>
+</li>
+</ul>
+<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira</span></a><p id="site-slogan"><span>CMS с оконным интерфейсом</span></p></div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row">
+<div id="content" class="col-sm-8">
+<main>
+<article>
+<div class="page-header">
+<h1>Установка Zira CMS</h1>
+</div>
+<div class="article parse-content">
+<blockquote>Внимание! В репозитории отсутствуют папки <b>cache</b>, <b>log</b> и <b>uploads</b>, поэтому перед началом установки их нужно создать.</blockquote>
+<p>Для того, чтобы установить Zira CMS необходимо для начала загрузить файлы из распакованного архива в корневую директорию сайта. Для этого можно использовать любой FTP-клиент, например FileZilla.</p>
+<p>После чего, нужно сразу подготовить файловую систему к установке. А именно, необходимо дать права на запись для следующих директорий:</p>
+<ul>
+<li>cache</li>
+<li>log</li>
+<li>uploads</li>
+</ul>
+<p>Это можно сделать с помощью того-же FTP-клиента.</p>
+<p>Кроме того, нужно переименовать следующие файлы:</p>
+<ul>
+<li>htaccess.txt в .htaccess (обратите внимание на точку в начале)</li>
+<li>robots.src.txt в robots.txt</li>
+<li>config.src.php в config.php</li>
+</ul>
+<p>Это необходимо сделать для того, чтобы при последующих обновлениях, случайно, не перезаписать эти файлы.</p>
+<p>Теперь, если вы попробуете открыть ваш сайт, то система сама перенаправит вас на страничку установки.</p>
+<p>Процесс установки состоит из нескольких шагов. Рассмотрим их по-подробнее.</p>
+<h2>Шаг 1. Начало установки.</h2>
+<p><img class="image" src="/uploads/zira/screens/screen-5.jpg" alt="Установка Zira CMS - Шаг 1." width="800" height="400" /></p>
+<p>Собственно, если вы попытались открыть главную страницу вашего сайта, то вы уже были перенаправлены на эту страницу, где система предлагает вам начать процесс установки. На этом этапе, вы можете выбрать язык по-умолчанию.</p>
+<p>Вы также можете начать установку набрав вручную адрес "<em>/install/index.php".</em></p>
+<h2>Шаг 2. Проверка.</h2>
+<p><img class="image" src="/uploads/zira/screens/screen-6.jpg" alt="Установка Zira CMS - Шаг 2." width="800" height="400" /></p>
+<p>На этом шаге, система проверит, соответствие установленного программного обеспечения на сервере требованиям Zira CMS. Кроме того, если вы не подготовили файловую систему, как это было описано выше, то дальнейшая установка будет невозможна.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Права на запись для <strong>config.php</strong> должны быть установлены в <strong>0666</strong>, а для папок <strong>log</strong>, <strong>cache</strong> и <strong>uploads</strong> в <strong>0777</strong>.</p>
+</blockquote>
+<h2>Шаг 3. Информация о сайте.</h2>
+<p><img class="image" src="/uploads/zira/screens/screen-8.jpg" alt="Установка Zira CMS - Шаг 4." width="800" height="800" /></p>
+<p>На данном этапе необходимо ввести название и слоган будущего сайта. А также контактный, почтовый адрес, который будет использован для отправки писем формой обратной связи.</p>
+<p>Для повышения безопасности, вам необходимо подобрать уникальный секретный ключ для вашего сайта.&nbsp; Он должен состоять, как минимум, из 8 символов (желательно, чтобы он содержал как буквы, так и цифры).</p>
+<p>Далее вам нужно указать данные для регистрации пользователя, которого вы будете в дальнейшем использовать для администрирования.</p>
+<p>Логин должен содержать только латинские буквы и цифры и иметь длину, минимум, 4 символа. Пароль должен содержать, хотя-бы, 6 символов.</p>
+<h2>Шаг 4. Настройка.</h2>
+<p><img class="image" src="/uploads/zira/screens/screen-9.jpg" alt="Установка Zira CMS - Шаг 5." width="800" height="1000" /></p>
+<p>Для хранения информации Zira CMS использует базу данных. В настоящий момент, поддерживаются MySQL 5 и SQLite 3.</p>
+<p>В случае MySQL, вам нужно указать, название базы данных, имя пользователя и пароль для подключения. Не забудьте перед этим создать их в панеле управления вашего хостинга.</p>
+<p>В случае SQLite, нужно указать только путь к файлу базы данных. Нельзя размещать его в корневой директории сайта, поскольку в этом случае, он может быть доступен для скачивания.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Следует иметь в виду, что SQLite должна иметь права на запись в ту директорию, в которой находится файл вашей базы данных.</p>
+</blockquote>
+<p>Также, для повышения безопасности, укажите уникальный префикс для таблиц базы данных.</p>
+<p>Корневую директорию и базовый URL, в большинстве случаев менять не нужно.</p>
+<p>Если вы опытный пользователь и хотите воспользоваться возможностями консоли Zira CMS, то укажите отдельный пароль для авторизации в ней.</p>
+<p>&nbsp;</p>
+<blockquote>После установки пароль от консоли изменить будет нельзя!</blockquote>
+<h2>Шаг 5. Установка.</h2>
+<p><img class="image" src="/uploads/zira/screens/screen-10.jpg" alt="Установка Zira CMS - Шаг 6." width="800" height="400" /></p>
+<p>Если вы ввели все данные верно, то на следующем шаге должен начаться процесс установки Zira CMS на сервере.</p>
+<h2>Шаг 6. Завершение.</h2>
+<p><img class="image" src="/uploads/zira/screens/screen-11.jpg" alt="Установка Zira CMS - Шаг 7." width="800" height="400" /></p>
+<p>После завершения установки, вы должны увидеть окно с поздравлением :)</p>
+<p>Теперь, ваш сайт может начать работу. При установке были созданы примеры страничек, которые вы сразу-же можете начать редактировать.</p>
+<p>Но перед тем, как вы приступите, настоятельно рекомендуется защитить файл <strong>config.php</strong> от случайной записи. Это можно сделать с помощью FTP-клиента, который вы использовали для загрузки файлов на сервер (т.е права на запись нужно установить в 0444).</p>
+</div>
+</article>
+</main>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<div id="footer-menu-wrapper">
+<p>Zira CMS - бесплатная система управления сайтом.</p>
+</div>
+</div>
+</div>
+</footer>
+</div></div><!--/main-container-wrapper-->
+<a href="javascript:void(0)" class="scroll-top" title="Наверх"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/zira.js"></script>
+<script src="/assets/js/lightbox.min.js"></script>
+</body>
+</html>

@@ -20,7 +20,7 @@
 <!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
 </head>
 <body class="home-page">
-<div class="zira-cms-block">
+<div class="zira-cms-block" id="zira-cms-block">
 <div class="zira-cms-wrapper">
     <a href="javascript:void(0)" class="zira-cms-presentation-close-btn"><span class="glyphicon glyphicon-download"></span></a>
     <div class="zira-cms-container">
@@ -72,7 +72,9 @@
 <li class="top-menu-logo">
 <a href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" /><span>Zira CMS</span></a></li>
 <li class="menu-item active"><a href="/" title="Главная" class="menu-link">Главная</a></li>
-<!--<li class="menu-item"><a href="/zira" title="Zira CMS" class="menu-link">Zira CMS</a></li>-->
+<li class="menu-item"><a href="/ziracms.html" title="Описание Zira CMS" class="menu-link">Описание</a></li>
+<li class="menu-item"><a href="/ziracms/install.html" title="Установка Zira CMS" class="menu-link">Установка</a></li>
+<li class="menu-item"><a href="/ziracms/update.html" title="Обновление Zira CMS" class="menu-link">Обновление</a></li>
 </ul>
 </div>
 </div>
@@ -140,18 +142,23 @@
 <div id="footer-menu-wrapper">
 <nav>
 <ul class="menu">
-<li class="menu-item active"><a href="/" title="Главная" class="menu-link">Главная</a></li>
+<li class="menu-item"><a href="/" title="Главная" class="menu-link">Главная</a></li>
 <li class="menu-item-separator"></li>
 <li class="menu-item">
-<!--<a href="/zira" title="Zira CMS" class="menu-link">Zira CMS <span class="caret"></span></a>-->
-<!--<ul class="footer-child-menu">
-<li><a href="/zira/modules" title="Модули">Модули</a></li>
-<li><a href="/zira/man" title="Инструкция">Инструкция</a></li>
-</ul>-->
+<a href="/" title="Zira CMS" class="menu-link">Zira CMS <span class="caret"></span></a>
+<ul class="footer-child-menu">
+<li><a href="https://github.com/ziracms/zira" title="Скачать Zira CMS">Скачать</a></li>
+<li><a href="/ziracms.html" title="Описание Zira CMS">Описание</a></li>
+<li><a href="/ziracms/install.html" title="Установка Zira CMS">Установка</a></li>
+<li><a href="/ziracms/update.html" title="Обновление Zira CMS">Обновление</a></li>
+</ul>
 </li>
+<li class="menu-item-separator"></li>
+<li class="menu-item"><a href="https://money.yandex.ru/to/410014796567498" title="Помощь проекту" class="menu-link">Помощь проекту</a></li>
 </ul>
 </nav>
 </div>
+<p>Zira CMS - бесплатная система управления сайтом.</p>
 </div>
 </div>
 </footer>
@@ -161,7 +168,7 @@
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/zira.js"></script>
 <script src="/assets/js/lightbox.min.js"></script>
-<script type="text/javascript">zira_base = '/';zira_scroll_effects_enabled = true;zira_show_images_description = true;</script>
+<script src="/assets/plugins/spread.js"></script>
 <script type="text/javascript">
 (function($){
     $(document).ready(function(){
@@ -222,6 +229,16 @@
             presentation_pos++;
         }, 5000);
     };
+})(jQuery);
+</script>
+<script type="text/javascript">
+(function($){
+    $(document).ready(function(){
+        $('#zira-cms-block').ziraSpread({
+            interval: 50,
+            delay: 500
+        });
+    });
 })(jQuery);
 </script>
 </body>
