@@ -277,6 +277,10 @@ footer p a:visited,
 #main-container footer ul.dropdown-menu li a{
     color:rgb(142,162,149);
 }
+footer p a:link,
+footer p a:visited {
+    color: #1EB5E1;
+}
 #footer-menu-wrapper ul.menu li.menu-item a.menu-link:hover,
 #footer-menu-wrapper ul.menu li.menu-item.active a.menu-link,
 #main-container footer ul.dropdown-menu li a:hover,
