@@ -299,6 +299,9 @@ textarea {
 .sidebar .carousel-wrapper.with-title .carousel {
     margin: 10px 0px 0px;
 }
+#vk_like {
+    margin: 20px 0px;
+}
 
 @keyframes loader {
   0% { 
