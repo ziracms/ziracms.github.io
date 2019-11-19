@@ -299,7 +299,7 @@ textarea {
 .sidebar .carousel-wrapper.with-title .carousel {
     margin: 10px 0px 0px;
 }
-#vk_like {
+#vk_like, #vk_comments {
     margin: 20px 0px;
 }
 #vk_groups {
