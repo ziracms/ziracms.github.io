@@ -59,11 +59,40 @@ zira_show_images_description = true;
         '<li class="menu-item"><a href="/ziracms/download.html" title="Скачать Zira CMS" class="menu-link">Скачать</a></li>'+
         '</ul></nav></div>';
         $(container).prepend(menu);
+        var menuObj = $(container).find('#secondary-menu-wrapper ul.nav.nav-pills.nav-stacked');
+        if ($(menuObj).length == 0) return;
+        $(menuObj).children('li.menu-item').each(function(){
+            var link = $(this).children('a');
+            if ($(link).length == 0) return true;
+            if ($(link).attr('href') == window.location.pathname) {
+                $(this).addClass('active');
+            }
+        });
+    }
+
+    function buildSecondaryCustomMenu(container) {
+        if ($(container).length == 0) return;
+        if ($(container).children('.secondary-custom-menu-wrapper').length > 0) return;
+        var menu = '<div class="secondary-custom-menu-wrapper"><nav><ul class="nav nav-pills nav-stacked">'+
+        '<li class="menu-item"><a href="/ziracms/shortcuts.html" title="Горячие клавиши Zira CMS" class="menu-link">Горячие клавиши</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/settings.html" title="Настройка Zira CMS" class="menu-link">Настройка системы</a></li>'+
+        '</ul></nav></div>';
+        $(container).prepend(menu);
+        var menuObj = $(container).find('.secondary-custom-menu-wrapper ul.nav.nav-pills.nav-stacked');
+        if ($(menuObj).length == 0) return;
+        $(menuObj).children('li.menu-item').each(function(){
+            var link = $(this).children('a');
+            if ($(link).length == 0) return true;
+            if ($(link).attr('href') == window.location.pathname) {
+                $(this).addClass('active');
+            }
+        });
     }
 
     $(document).ready(function(){
         buildTopMenu($('header .container .row').first());
         buildBottomMenu($('footer .container .row').first());
+        buildSecondaryCustomMenu($('.sidebar aside').first());
         buildSecondaryMenu($('.sidebar aside').first());
     });
 })(jQuery);
