@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
 <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
 <link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
 <!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
@@ -58,9 +59,7 @@
 <nav class="navbar navbar-default">
 <div class="container-fluid">
 <div class="navbar-header">
-<div class="top-menu-logo top-menu-header-logo"><a href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" /><span>Zira CMS</span></a></div><button type="button" class="mobile-search-button navbar-toggle collapsed" data-toggle="collapse" data-target=".mobile-search-wrapper" aria-expanded="false">
-<span class="glyphicon glyphicon-search"></span>
-</button>
+<div class="top-menu-logo top-menu-header-logo"><a href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" /><span>Zira CMS</span></a></div>
 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-container" aria-expanded="false">
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
@@ -118,6 +117,15 @@
 </div>
 <div class="col-sm-4 sidebar">
 <aside>
+<div id="secondary-menu-wrapper">
+<nav>
+<ul class="nav nav-pills nav-stacked">
+<li class="menu-item"><a href="https://github.com/ziracms/zira" title="Репозиторий Zira CMS" class="menu-link">Репозиторий</a></li>
+<li class="menu-item"><a href="https://vk.com/ziracms.public" title="Сообщество Zira CMS" class="menu-link">Сообщество</a></li>
+<li class="menu-item"><a href="/ziracms/download.html" title="Скачать Zira CMS" class="menu-link">Скачать</a></li>
+</ul>
+</nav>
+</div>
 <div class="block widget-category-wrapper">
 <div class="page-header">
 <h2 class="widget-title">Новости</h2>
@@ -172,9 +180,11 @@
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/zira.js"></script>
+<script src="/assets/js/parse.js"></script>
 <script src="/assets/js/lightbox.min.js"></script>
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
 <script type="text/javascript" src="/assets/plugins/vk.js"></script>
+<script src="/theme/js/extra.js"></script>
 <script src="/assets/plugins/spread.js"></script>
 <script type="text/javascript">
 (function($){
