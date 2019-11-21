@@ -10,7 +10,7 @@ zira_show_images_description = true;
         '<div class="top-menu-logo top-menu-header-logo"><a href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" /><span>Zira CMS</span></a></div>'+
         '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-container" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>'+
         '</div><div class="collapse navbar-collapse" id="top-menu-container"><ul class="nav navbar-nav">'+
-        '<li class="top-menu-logo"><a href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" /><span>Zira CMS</span></a></li>'+
+        '<li class="top-menu-logo"><a href="/" title="Zira"><img src="/assets/images/zira.png" alt="Zira" /><span>Zira</span></a></li>'+
         '<li class="menu-item"><a href="/" title="Главная" class="menu-link">Главная</a></li>'+
         '<li class="menu-item"><a href="/ziracms.html" title="Описание Zira CMS" class="menu-link">Описание</a></li>'+
         '<li class="menu-item"><a href="/ziracms/install.html" title="Установка Zira CMS" class="menu-link">Установка</a></li>'+
