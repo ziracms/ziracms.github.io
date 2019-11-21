@@ -56,7 +56,7 @@ zira_show_images_description = true;
         var menu = '<div id="secondary-menu-wrapper"><nav><ul class="nav nav-pills nav-stacked">'+
         '<li class="menu-item"><a href="https://github.com/ziracms/zira" title="Репозиторий Zira CMS" class="menu-link">Репозиторий</a></li>'+
         '<li class="menu-item"><a href="https://vk.com/ziracms.public" title="Сообщество Zira CMS" class="menu-link">Сообщество</a></li>'+
-        '<li class="menu-item"><a href="/ziracms/download.html" title="Скачать Zira CMS" class="menu-link">Скачать</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/download.html" title="Скачать Zira CMS" class="menu-link download-link">Скачать</a></li>'+
         '</ul></nav></div>';
         $(container).prepend(menu);
         var menuObj = $(container).find('#secondary-menu-wrapper ul.nav.nav-pills.nav-stacked');
@@ -74,8 +74,15 @@ zira_show_images_description = true;
         if ($(container).length == 0) return;
         if ($(container).children('.secondary-custom-menu-wrapper').length > 0) return;
         var menu = '<div class="secondary-custom-menu-wrapper"><nav><ul class="nav nav-pills nav-stacked">'+
+        '<li class="menu-item"><a href="/ziracms/requirements.html" title="Системные требования Zira CMS" class="menu-link">Системные требования</a></li>'+
         '<li class="menu-item"><a href="/ziracms/shortcuts.html" title="Горячие клавиши Zira CMS" class="menu-link">Горячие клавиши</a></li>'+
         '<li class="menu-item"><a href="/ziracms/settings.html" title="Настройка Zira CMS" class="menu-link">Настройка системы</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/filemanager.html" title="Работа с файлами в Zira CMS" class="menu-link">Работа с файлами</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/publication.html" title="Публикация записей в Zira CMS" class="menu-link">Публикация записей</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/menu.html" title="Редактор меню Zira CMS" class="menu-link">Редактор меню</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/widgets.html" title="Управление виджетами Zira CMS" class="menu-link">Управление виджетами</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/integration.html" title="Интеграция Zira CMS с социальными сетями" class="menu-link">Интеграция с соц. сетями</a></li>'+
+        '<li class="menu-item"><a href="/ziracms/console.html" title="Работа с консолью Zira CMS" class="menu-link">Работа с консолью</a></li>'+
         '</ul></nav></div>';
         $(container).prepend(menu);
         var menuObj = $(container).find('.secondary-custom-menu-wrapper ul.nav.nav-pills.nav-stacked');

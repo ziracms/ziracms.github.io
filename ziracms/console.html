@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/zira.png" />
+<meta charset="utf-8" />
+<title>Работа с консолью Zira CMS</title>
+<meta name="keywords" content="zira, cms, консоль, unix, shell, php, db" />
+<meta name="description" content="Для опытных пользователей, имеющих навыки программирования Zira CMS предоставляет возможность работать в консоли." />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
+</head>
+<body class="page">
+<div id="main-container-wrapper"><div id="main-container">
+<header>
+<div class="container">
+<div class="row">
+<ul id="user-menu" class="not-authorized usermenu-popup">
+<li class="menu-item">
+<a href="/ziracms/download.html" class="menu-link"> Скачать</a>
+</li>
+</ul>
+<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira</span></a><p id="site-slogan"><span>CMS с оконным интерфейсом</span></p></div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row">
+<div id="content" class="col-sm-8">
+<main>
+<article>
+<div class="page-header">
+<h1>Работа с консолью</h1>
+</div>
+<div class="article parse-content">
+<p>Для опытных пользователей, имеющих навыки программирования Zira CMS предоставляет возможность работать в консоли.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-29.jpg" alt="Консоль Zira CMS" width="800" height="400" /></p>
+<p>Для того, чтобы консоль была активирована, при установке Zira CMS нужно указать отдельный пароль для авторизации в ней. Если поле пароля при установке было оставлено пустым, то консоль будет отключена.</p>
+<p>Окно консоли можно найти в меню верхней панели "Система &rarr; Консоль". Сразу после открытия, консоль потребует ввести пароль авторизации.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>В целях безопасности, пароль от консоли не должен совпадать с паролем администратора!</p>
+</blockquote>
+<p>При успешной авторизации, появится командная строка, так называемый <em>shell</em>.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Консоль рассчитана для работы только в среде UNIX, командная строка Windows не поддерживается!</p>
+</blockquote>
+<p>В консоли можно выполнять простейшие команды, типа "<em>ls</em>", "<em>cd</em>", "<em>pwd</em>" итд. При этом, они будут запускаться от имени пользователя под которым работает веб-сервер.</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>Для просмотра информации о PHP, нужно выполнить команду "php -i".</p>
+</blockquote>
+<p>Кроме того, консоль Zira CMS позволяет выполнять PHP-код. Для этого, в режиме "<em>shell</em>" наберите команду "<strong><em>php</em></strong>". В этом случае, консоль будет переведена в режим "<em>php</em>" и вы сможете набрать строку с PHP-кодом. Если введеный код осуществит какой-либо вывод, то он будет отображен в ответе. Для выхода из режима "<em>php</em>" наберите команду "<strong><em>exit</em></strong>".</p>
+<p>Также, в консоли Zira CMS можно выполнять запросы к базе данных. Для этого в режиме "<em>shell</em>" наберите команду "<strong><em>db</em></strong>". После чего, можно будет набирать SQL-запросы в командной строке консоли. Выход, обратно в режим "<em>shell</em>" осуществляется командой "<strong><em>exit</em></strong>".</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>При работе с консолью, нужно быть предельно внимательным, чтобы не совершить ошибку, поскольку это может привести к необратимым последствиям!</p>
+</blockquote>
+<p>Следует сказать, что некоторые хостинг-провайдеры не разрешают выполнять shell-команды на своих серверах, но как правило, если хостинг не бесплатный, эта функция доступна.</p>
+</div>
+<div id="vk_like"></div>
+</article>
+</main>
+<div id="vk_comments"></div>
+</div>
+<div class="col-sm-4 sidebar">
+<aside>
+<div id="vk_groups"></div>
+</aside>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<p><a href="https://github.com/ziracms/zira">Zira CMS</a> - бесплатная система управления сайтом.</p>
+</div>
+</div>
+</footer>
+</div></div><!--/main-container-wrapper-->
+<a href="javascript:void(0)" class="scroll-top" title="Наверх"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<div id="vk_community_messages"></div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/theme/js/extra.js"></script>
+<script src="/assets/js/zira.js"></script>
+<script src="/assets/js/parse.js"></script>
+<script src="/assets/js/lightbox.min.js"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+<script type="text/javascript" src="/assets/plugins/vk.js"></script>
+</body>
+</html>

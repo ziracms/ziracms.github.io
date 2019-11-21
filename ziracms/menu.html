@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/zira.png" />
+<meta charset="utf-8" />
+<title>Редактор меню Zira CMS</title>
+<meta name="keywords" content="zira, cms, меню, выпадающее, верхнее, нижнее, вторичное" />
+<meta name="description" content="Zira CMS имеет гибкую систему меню, с помощью которой вы можете добавлять и редактировать элементы верхнего и нижнего меню, а также привязывать к элементам вторичное и выпадающее меню." />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
+</head>
+<body class="page">
+<div id="main-container-wrapper"><div id="main-container">
+<header>
+<div class="container">
+<div class="row">
+<ul id="user-menu" class="not-authorized usermenu-popup">
+<li class="menu-item">
+<a href="/ziracms/download.html" class="menu-link"> Скачать</a>
+</li>
+</ul>
+<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira</span></a><p id="site-slogan"><span>CMS с оконным интерфейсом</span></p></div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row">
+<div id="content" class="col-sm-8">
+<main>
+<article>
+<div class="page-header">
+<h1>Редактор меню</h1>
+</div>
+<div class="article parse-content">
+<p>Zira CMS имеет гибкую систему меню, с помощью которой вы можете добавлять и редактировать элементы верхнего и нижнего меню, а также привязывать к элементам вторичное и выпадающее меню.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-21.jpg" alt="Редактор меню Zira CMS" width="800" height="400" /></p>
+<p>Редактор меню можно найти в верхней панеле Zira CMS (окно Система &rarr; Меню).</p>
+<p>При установке, инсталлятор создал несколько пунктов меню. Среди них есть ссылка на главную страницу. Как вы заметили, оно имеет заголовок на английском языке. Это сделано для того, чтобы в случае мультиязычного сайта не нужно было создавать разные пункты для главной на разных языках. Заголовок меню переводится на текущий язык при выводе. Вы можете добавлять собственные строки перевода, если включите в настройках системы опцию "Переводы БД".</p>
+<p>По умолчанию, в редакторе открывается верхнее меню. Вы можете переключиться на нижнее, кликнув по ссылке в левой колонке окна. В панеле инструментов вы найдете кнопку "Новый элемент", которая открывает окно добавления нового пункта.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-22.jpg" alt="Добавление элемента меню в Zira CMS" width="800" height="400" /></p>
+<p>В этом окне нужно заполнить поля "URL" и "Заголовок". В поле "<strong>URL</strong>" вводится адрес на который будет ссылаться элемент. Адрес может быть абсолютный, относительный или внутренний. Для внутренних страниц сайта рекомендуется использовать внутренний адрес, например "<b>ziracms/menu.html</b>". Относительный адрес похож на внутренний, но в отличие от него, он начинается с базового URL-адреса (обычно слэш), например "<b>/ziracms/menu.html</b>". Абсолютный адрес отличается от относительного тем, что содержит в себе также хост и выглядит так: https://ziracms.github.io/ziracms/menu.html. Если в качестве адреса указан внутренний адрес, без указания базового URL, то система сама добавит его при выводе меню.</p>
+<p>Как уже говорилось выше, заголовок элемента может быть написан как на русском языке, так и на английском. Если введенная фраза имеет перевод, она будет переведена на текущий язык пользователя.</p>
+<p>В поле "<strong>Класс</strong>" вы можете ввести имя CSS-класса, которое будет присвоено данному элементу. Под этим полем вы можете видеть несколько существующих классов, которые будут менять цвет элемента.</p>
+<p>Чтобы скрыть элемент и не отображать его, снимите галочку "<strong>Показывать элемент</strong>". Для того, чтобы при клике страница открывалась в новом окне, установите галочку "<strong>Открывать в новой вкладке</strong>".</p>
+<p>Изменить порядок вывода элементов можно перетаскивая их мышью вверх и вниз методом "Drag and Drop".</p>
+<h2>Вторичное меню и дочерние элементы.</h2>
+<p>В Zira CMS, помимо верхнего и нижнего меню, есть возможность создавать вторичное меню. Вторичное меню привязывается к родительскому элементу верхнего меню с адресом страницы, либо категории и отображается виджетом в левой или правой колонке, при переходе на страницу родительского элемента. Иными словами, вторичное меню представляет из себя боковое меню, в котором удобно показывать основные ссылки текущей категории.</p>
+<p>Для того, чтобы создать элемент вторичного меню, нужно выделить элемент верхнего меню и выбрать пункт "<strong>Вторичное меню</strong>" в контекстном меню. Дальнейшие действия ничем не отличаются от тех, что вы делали создавая родительские элементы.</p>
+<p>К элементам, как верхнего меню, так и вторичного меню, можно привязывать дочерние элементы. Дочерние элементы верхнего меню будут отображаться в качестве выпадающего меню. Дочерние элементы вторичного меню выводятся под родительским элементом.</p>
+<p>Создание дочерних элементов аналогично, созданию элементов вторичного меню. Для этого нужно выделить родительский элемент и выбрать пункт "<strong>Дочерние элементы</strong>" в контекстном меню окна.</p>
+<p>Следует также знать, что вторичное меню может быть привязано также и к скрытым элементам меню. Если оно привязано к элементу, который ссылается на категорию, то вторичное меню будет выводится также и в подкатегориях, если не будет найдено иного меню, привязанного к текущему адресу.</p>
+</div>
+<div id="vk_like"></div>
+</article>
+</main>
+<div id="vk_comments"></div>
+</div>
+<div class="col-sm-4 sidebar">
+<aside>
+<div id="vk_groups"></div>
+</aside>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<p><a href="https://github.com/ziracms/zira">Zira CMS</a> - бесплатная система управления сайтом.</p>
+</div>
+</div>
+</footer>
+</div></div><!--/main-container-wrapper-->
+<a href="javascript:void(0)" class="scroll-top" title="Наверх"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<div id="vk_community_messages"></div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/theme/js/extra.js"></script>
+<script src="/assets/js/zira.js"></script>
+<script src="/assets/js/parse.js"></script>
+<script src="/assets/js/lightbox.min.js"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+<script type="text/javascript" src="/assets/plugins/vk.js"></script>
+</body>
+</html>

@@ -932,11 +932,18 @@ ul.vote-results li .vote-result{
 #secondary-menu-wrapper ul li a:link,
 #secondary-menu-wrapper ul li a:visited{
     color:rgb(95,95,95);
-    background-color:rgb(159,227,204);
+    background-color:#a2d8da;
+}
+#secondary-menu-wrapper ul li a.download-link:link,
+#secondary-menu-wrapper ul li a.download-link:visited{
+    background-color:#f5f3bc;
 }
 #secondary-menu-wrapper ul li.active a:link,
 #secondary-menu-wrapper ul li.active a:visited,
-#secondary-menu-wrapper ul li a:hover{
+#secondary-menu-wrapper ul li a:hover,
+#secondary-menu-wrapper ul li.active a.download-link:link,
+#secondary-menu-wrapper ul li.active a.download-link:visited,
+#secondary-menu-wrapper ul li a.download-link:hover{
     background-color:#009b9f;
 }
 #secondary-menu-wrapper ul li.parent a.menu-link{

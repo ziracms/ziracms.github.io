@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/zira.png" />
+<meta charset="utf-8" />
+<title>Управление виджетами Zira CMS</title>
+<meta name="keywords" content="zira, cms, виджет, блок, код, текст, расположение, счетчик" />
+<meta name="description" content="Виджеты в Zira CMS представляют собой контейнеры в которых выводится определенный контент. К виджетам относятся основное меню, пользовательское меню, логотип, переключатель языка итд." />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
+</head>
+<body class="page">
+<div id="main-container-wrapper"><div id="main-container">
+<header>
+<div class="container">
+<div class="row">
+<ul id="user-menu" class="not-authorized usermenu-popup">
+<li class="menu-item">
+<a href="/ziracms/download.html" class="menu-link"> Скачать</a>
+</li>
+</ul>
+<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira</span></a><p id="site-slogan"><span>CMS с оконным интерфейсом</span></p></div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row">
+<div id="content" class="col-sm-8">
+<main>
+<article>
+<div class="page-header">
+<h1>Управление виджетами Zira CMS</h1>
+</div>
+<div class="article parse-content">
+<p>Виджеты в Zira CMS представляют собой контейнеры в которых выводится определенный контент. К виджетам относятся основное меню, пользовательское меню, логотип, переключатель языка итд.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-23.jpg" alt="Виджеты Zira CMS" width="800" height="400" /></p>
+<p>Любой виджет может быть деактивирован, либо наоборот, активирован, при необходимости. Список существующих виджетов можно найти, если открыть окно "Настройки &rarr; Виджеты".</p>
+<p>Неактивные виджеты выводятся серым цветом. Кликнув дважды можно открыть окно редактирования свойств виджета.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-24.jpg" alt="Свойства виджета в Zira CMS" width="800" height="400" /></p>
+<p>В этом окне можно задать место расположения виджета, выбрав его из соответствующего списка. Это может быть шапка (header), левая колонка, правая колонка, подвал (footer) итд. Также, можно вставить виджет в тег <strong>HEAD</strong> или в начало, либо конец тега <strong>BODY.</strong> Эта функция может быть использована для вставки виджетов с блоками кодов счетчиков.</p>
+<p>Показ виджета можно ограничить только главной страницей, либо страницами определенной категории. Для того, чтобы показывать виджет только на страницах записей, можно применить соответствующий фильтр.</p>
+<p>Чтобы изменить порядок вывода определенного виджета, нужно перетащить его мышкой вверх или вниз, в зависимости от того где вы хотите его расположить.</p>
+<p>Для того, чтобы вывести виджет в различных категориях и при этом не выводить его на остальных страницах, нужно скопировать виджет, а затем отредактировать свойства созданной копии виджета отдельно.</p>
+<p>&nbsp;</p>
+<p>Как уже упоминалось выше, Zira CMS позволяет вставлять с помощью виджетов блоки кода. Для этого нужно сначала создать новый блок.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-25.jpg" alt="Блоки в Zira CMS" width="800" height="400" /></p>
+<p>Это можно сделать открыв окно "Система &rarr; Блоки". В появившемся окне кликните по ссылке "<strong>Создать</strong>". Перед вами откроется окно создания нового блока.</p>
+<p>&nbsp;</p>
+<p><img class="image" src="/uploads/zira/screens/screen-26.jpg" alt="Создание блока в Zira CMS" width="800" height="400" /></p>
+<p>В этом окне нужно ввести заголовок блока и его содержимое. Здесь-же вы можете выбрать расположение будущего виджета. По умолчанию, заголовок блока отображаться не будет. Чтобы показать его включите опцию "<strong>Использовать шаблон</strong>". В этом случае, содержимое блока будет "обернуто" контейнером, для более эстетичного показа на страницах сайта. Эту опцию следует включать только для блоков с текстовым содержимым. Блоки с кодами счетчиков должны выводится без шаблона.</p>
+<p>После того, как блок будет создан, система также создаст новый виджет для него, который можно будет найти в окне виджетов. Если вы случайно удалите виджет блока, то создавать блок заново не придется, вам нужно лишь пересоздать сам виджет. Для этого выделите нужный блок и выберите пункт "<strong>Создать виджет</strong>" в оконном меню.</p>
+<p>Ввод текста блока можно осуществлять с помощью текстового редактора. Для этого выделите нужный блок и нажмите на ссылку "<strong>Открыть текст</strong>" в левой колонке окна. Если кликнуть по ссылке "<strong>Открыть код</strong>", то откроется редактор, типа блокнота, который удобно использовать для редактирования кода скриптов.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="vk_like"></div>
+</article>
+</main>
+<div id="vk_comments"></div>
+</div>
+<div class="col-sm-4 sidebar">
+<aside>
+<div id="vk_groups"></div>
+</aside>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<p><a href="https://github.com/ziracms/zira">Zira CMS</a> - бесплатная система управления сайтом.</p>
+</div>
+</div>
+</footer>
+</div></div><!--/main-container-wrapper-->
+<a href="javascript:void(0)" class="scroll-top" title="Наверх"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<div id="vk_community_messages"></div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/theme/js/extra.js"></script>
+<script src="/assets/js/zira.js"></script>
+<script src="/assets/js/parse.js"></script>
+<script src="/assets/js/lightbox.min.js"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
+<script type="text/javascript" src="/assets/plugins/vk.js"></script>
+</body>
+</html>
