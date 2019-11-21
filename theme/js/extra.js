@@ -7,7 +7,7 @@ zira_show_images_description = true;
         if ($(container).length == 0) return;
         if ($(container).children('#top-menu-wrapper').length > 0) return;
         var menu = $('<div id="top-menu-wrapper"><nav class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header">'+
-        '<div class="top-menu-logo top-menu-header-logo"><a href="/" title="Zira CMS"><img src="/assets/images/zira.png" alt="Zira CMS" /><span>Zira CMS</span></a></div>'+
+        '<div class="top-menu-logo top-menu-header-logo"><a href="/" title="Zira"><img src="/assets/images/zira.png" alt="Zira" /><span>Zira</span></a></div>'+
         '<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-container" aria-expanded="false"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>'+
         '</div><div class="collapse navbar-collapse" id="top-menu-container"><ul class="nav navbar-nav">'+
         '<li class="top-menu-logo"><a href="/" title="Zira"><img src="/assets/images/zira.png" alt="Zira" /><span>Zira</span></a></li>'+
