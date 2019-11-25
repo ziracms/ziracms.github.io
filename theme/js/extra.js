@@ -96,10 +96,20 @@ zira_show_images_description = true;
         });
     }
 
+    function buildDisqus() {
+        if ($('#vk_comments').length == 0) return;
+        $('#vk_comments').after('<div id="disqus_thread" />');
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ziracms.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    }
+
     $(document).ready(function(){
         buildTopMenu($('header .container .row').first());
         buildBottomMenu($('footer .container .row').first());
         buildSecondaryCustomMenu($('.sidebar aside').first());
         buildSecondaryMenu($('.sidebar aside').first());
+        buildDisqus();
     });
 })(jQuery);
