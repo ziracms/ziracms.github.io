@@ -15,7 +15,6 @@ zira_show_images_description = true;
         '<li class="menu-item"><a href="/ziracms.html" title="Описание Zira CMS" class="menu-link">Описание</a></li>'+
         '<li class="menu-item"><a href="/ziracms/install.html" title="Установка Zira CMS" class="menu-link">Установка</a></li>'+
         '<li class="menu-item"><a href="/ziracms/update.html" title="Обновление Zira CMS" class="menu-link">Обновление</a></li>'+
-        '<li class="menu-item"><a href="/forum.html" title="Форум поддержки Zira CMS" class="menu-link">Форум</a></li>'+
         '</ul></div></div></nav></div>');
         $(container).append(menu);
         var menuObj = $(container).find('#top-menu-container ul.nav.navbar-nav');
@@ -45,7 +44,6 @@ zira_show_images_description = true;
         '</ul>'+
         '</li>'+
         '<li class="menu-item-separator"></li>'+
-        '<li class="menu-item"><a href="/forum.html" title="Форум поддержки Zira CMS" class="menu-link">Форум</a></li>'+
         '<li class="menu-item-separator"></li>'+
         '<li class="menu-item"><a href="https://money.yandex.ru/to/410014796567498" title="Помощь проекту" class="menu-link">Помощь проекту</a></li>'+
         '</ul></nav></div>';
@@ -113,6 +111,6 @@ zira_show_images_description = true;
         buildBottomMenu($('footer .container .row').first());
         buildSecondaryCustomMenu($('.sidebar aside').first());
         buildSecondaryMenu($('.sidebar aside').first());
-        buildDisqus();
+        //buildDisqus();
     });
 })(jQuery);
