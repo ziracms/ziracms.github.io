@@ -39,13 +39,14 @@ zira_show_images_description = true;
         '<li><a href="/ziracms.html" title="Описание Zira CMS">Описание</a></li>'+
         '<li><a href="/ziracms/install.html" title="Установка Zira CMS">Установка</a></li>'+
         '<li><a href="/ziracms/update.html" title="Обновление Zira CMS">Обновление</a></li>'+
-        '<li><a href="/ziracms/download.html" title="Скачать Zira CMS">Скачать</a></li>'+
+        //'<li><a href="/ziracms/download.html" title="Скачать Zira CMS">Скачать</a></li>'+
         '<li><a href="https://github.com/ziracms/zira" title="Репозиторий Zira CMS">Репозиторий</a></li>'+
         '</ul>'+
         '</li>'+
         '<li class="menu-item-separator"></li>'+
-        '<li class="menu-item-separator"></li>'+
         '<li class="menu-item"><a href="https://money.yandex.ru/to/410014796567498" title="Помощь проекту" class="menu-link">Помощь проекту</a></li>'+
+        '<li class="menu-item-separator"></li>'+
+        '<li class="menu-item"><a href="/contacts.html" title="Контакты" class="menu-link">Контакты</a></li>'+
         '</ul></nav></div>';
         $(container).prepend(menu);
         
