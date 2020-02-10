@@ -17,6 +17,7 @@
     display: inline-block;
     vertical-align: top;
     margin: 0 1% 1% 0;
+    box-shadow: 3px 3px 3px #277150;
 }
 .screen-list li:nth-child(2n) {
     margin-right: 0;
@@ -29,9 +30,13 @@
 }
 .zira-editor-download-wrapper {
     width: 100%;
-    height: 100px;
+    height: 80px;
     text-align: center;
-    margin: 120px 0px 0px;
+}
+blockquote {
+    background-color: #edf9f7;
+    border-color: #816e99;
+    border: 1px solid #97d2c7;
 }
 </style>
 <!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
@@ -47,7 +52,7 @@
 <a href="https://github.com/ziracms/zira" class="menu-link"> Zira CMS</a>
 </li>
 </ul>
-<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira Editor"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira Editor</span></a><p id="site-slogan"><span>Lightweight IDE for Linux, Android and Raspberry Pi</span></p></div>
+<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira Project"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira Project</span></a><p id="site-slogan"><span>Software for advanced users</span></p></div>
 </div>
 </div>
 </header>
@@ -61,9 +66,8 @@
 </div>
 <div class="article parse-content">
 <blockquote>
-<p>Zira Editor is a lightweight PHP Editor for Linux with syntax highlighting and autocomplete.</p>
 <p>If you're looking for Geany alternative for KDE, you should try Zira Editor.</p>
-<p>It's written in QT and can be run in both KDE and Gnome (also tested in Android and Raspbian Buster with Raspberry PI 3 B+).</p>
+<p>Zira Editor is a lightweight PHP Editor for Linux, Android and Raspberry Pi with syntax highlighting and autocomplete.</p>
 </blockquote>
 <h3>Watch demo:</h3>
 <video width="100%" controls autoplay muted>
@@ -158,25 +162,30 @@
 </blockquote>
 <h3>Screenshots:</h3>
 <ul class="list screen-list">
-<li><a href="/uploads/editor/screens/screen1.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen1.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen2.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen2.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen3.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen3.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen4.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen4.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen5.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen5.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen6.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen6.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen7.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen7.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen8.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen8.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen9.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen9.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen10.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen10.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen11.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen11.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen12.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen12.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen13.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen13.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen14.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen14.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen15.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen15.jpg" alt="Zira PHP Editor" /></a></li>
-<li><a href="/uploads/editor/screens/screen16.jpg" data-lightbox="zira-editor"><img src="/uploads/editor/screens/screen16.jpg" alt="Zira PHP Editor" /></a></li>
+<li><a href="/uploads/editor/screens/screen1.jpg" data-lightbox="zira-editor" data-title="Autocomplete classes, functions & variables"><img alt="Autocomplete classes, functions & variables" src="/uploads/editor/screens/screen1.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen2.jpg" data-lightbox="zira-editor" data-title="Function arguments display"><img alt="Function arguments display" src="/uploads/editor/screens/screen2.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen3.jpg" data-lightbox="zira-editor" data-title="F1 Help"><img alt="F1 Help" src="/uploads/editor/screens/screen3.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen4.jpg" data-lightbox="zira-editor" data-title="File symbols navigator"><img alt="File symbols navigator" src="/uploads/editor/screens/screen4.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen5.jpg" data-lightbox="zira-editor" data-title="Quick access panel"><img alt="Quick access panel" src="/uploads/editor/screens/screen5.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen6.jpg" data-lightbox="zira-editor" data-title="Syntax highlighting for PHP, JS, CSS, HTML"><img alt="Syntax highlighting for PHP, JS, CSS, HTML" src="/uploads/editor/screens/screen6.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen7.jpg" data-lightbox="zira-editor" data-title="Highlight matching tags"><img alt="Highlight matching tags" src="/uploads/editor/screens/screen7.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen8.jpg" data-lightbox="zira-editor" data-title="Highlight matching php expression"><img alt="Highlight matching php expression" src="/uploads/editor/screens/screen8.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen9.jpg" data-lightbox="zira-editor" data-title="Color preview"><img alt="Color preview" src="/uploads/editor/screens/screen9.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen10.jpg" data-lightbox="zira-editor" data-title="Highlight matching braces"><img alt="Highlight matching braces" src="/uploads/editor/screens/screen10.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen11.jpg" data-lightbox="zira-editor" data-title="Search and replace text"><img alt="Search and replace text" src="/uploads/editor/screens/screen11.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen12.jpg" data-lightbox="zira-editor" data-title="Built-in color picker"><img alt="Built-in color picker" src="/uploads/editor/screens/screen12.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen13.jpg" data-lightbox="zira-editor" data-title="Dockable sidebar, toolbar and output panel"><img alt="Dockable sidebar, toolbar and output panel" src="/uploads/editor/screens/screen13.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen14.jpg" data-lightbox="zira-editor" data-title="Git integration"><img alt="Git integration" src="/uploads/editor/screens/screen14.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen15.jpg" data-lightbox="zira-editor" data-title="Source map preview"><img alt="Source map preview" src="/uploads/editor/screens/screen15.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen16.jpg" data-lightbox="zira-editor" data-title="Layout for wide screens"><img alt="Layout for wide screens" src="/uploads/editor/screens/screen16.jpg" /></a></li>
 </ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <div class="zira-editor-download-wrapper">
 <a href="https://github.com/ziracms/editor/releases" class="zira-cms-download-btn">Download Zira Editor</a>
+</div>
+<div class="zira-editor-download-wrapper">
+<a href="https://play.google.com/store/apps/details?id=com.github.ziracms.editor"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200" /></a>
 </div>
 </div>
 </article>
