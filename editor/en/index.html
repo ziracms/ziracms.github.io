@@ -16,8 +16,11 @@
     width: 49%;
     display: inline-block;
     vertical-align: top;
-    margin: 0 1% 1% 0;
-    box-shadow: 3px 3px 3px #277150;
+    margin: 0 1% 2% 0;
+    box-shadow: 0px 0px 1px #e0ffde;
+}
+.screen-list li:hover {
+    box-shadow: 0px 0px 1px #5e6b5d;
 }
 .screen-list li:nth-child(2n) {
     margin-right: 0;
@@ -32,11 +35,66 @@
     width: 100%;
     height: 80px;
     text-align: center;
+    margin-bottom: 30px;
+}
+.demo-wrapper {
+    background-color: #222628;
+    color: #fff;
+    padding: 20px 0px;
+}
+.title-wrapper {
+    background-color: #efb103;
+    padding: 40px 0px 80px;
+    color: #000;
+    font-size: 150%;
+}
+.screens-wrapper {
+    background-color: #060205;
+    color: #fff;
+    padding: 20px 0px;
+}
+.features-wrapper {
+    background-color: #7ea6bd;
+}
+.download-wrapper {
+    padding: 120px 0px 50px;
+    background-color: #11271d;
+}
+.zira-cms-download-btn:link, 
+.zira-cms-download-btn:visited {
+    font-size: 200%;
+    padding: 30px 60px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+header {
+    margin-bottom: 0;
+}
+footer {
+    margin-top: 0;
+    background: #080c13;
+    border: none;
 }
 blockquote {
-    background-color: #edf9f7;
-    border-color: #816e99;
-    border: 1px solid #97d2c7;
+    background-color: #0f191d;
+    border-left: 10px solid #dbedff;
+    border-right: 10px solid #dbedff;
+    margin-bottom: 0px;
+    font-size: 120%;
+    color: #7ea6bd;
+    padding: 20px 40px;
+}
+.page-header,
+.page-header h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 150%;
+    margin-bottom: 50px;
+}
+.screens-wrapper h2 {
+    color: #ff04c9;
+    font-size: 180%;
 }
 </style>
 <!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
@@ -56,23 +114,27 @@ blockquote {
 </div>
 </div>
 </header>
-<div class="container">
-<div class="row">
-<div id="content" class="col-sm-12">
+<div id="content">
 <main>
 <article>
-<div class="page-header">
-<h1>Zira PHP Editor</h1>
-</div>
-<div class="article parse-content">
-<blockquote>
-<p>If you're looking for Geany alternative for KDE, you should try Zira Editor.</p>
-<p>Zira Editor is a lightweight PHP Editor for Linux, Android and Raspberry Pi with syntax highlighting and autocomplete.</p>
-</blockquote>
-<h3>Watch demo:</h3>
+<div class="demo-wrapper">
+<div class="container">
 <video width="100%" controls autoplay muted>
 <source src="/uploads/editor/ziracast.mp4" type="video/mp4">
 </video>
+</div>
+</div>
+<div class="title-wrapper">
+<div class="container">
+<div class="page-header">
+<h1>Zira PHP Editor</h1>
+</div>
+<p>If you're looking for Geany alternative for KDE, you should try Zira Editor.</p>
+<p>Zira Editor is a lightweight PHP Editor for Linux, Android and Raspberry Pi with syntax highlighting and autocomplete.</p>
+</div>
+</div>
+<div class="features-wrapper">
+<div class="container">
 <blockquote>
 <h3>Main features:</h3>
 <ul>
@@ -160,33 +222,38 @@ blockquote {
 <li>run install.sh</li>
 </ul>
 </blockquote>
-<h3>Screenshots:</h3>
+</div>
+</div>
+<div class="screens-wrapper">
+<div class="container">
+<h2>Screenshots:</h2>
 <ul class="list screen-list">
-<li><a href="/uploads/editor/screens/screen1.jpg" data-lightbox="zira-editor" data-title="Autocomplete classes, functions & variables"><img alt="Autocomplete classes, functions & variables" src="/uploads/editor/screens/screen1.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen2.jpg" data-lightbox="zira-editor" data-title="Function arguments display"><img alt="Function arguments display" src="/uploads/editor/screens/screen2.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen3.jpg" data-lightbox="zira-editor" data-title="F1 Help"><img alt="F1 Help" src="/uploads/editor/screens/screen3.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen4.jpg" data-lightbox="zira-editor" data-title="File symbols navigator"><img alt="File symbols navigator" src="/uploads/editor/screens/screen4.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen5.jpg" data-lightbox="zira-editor" data-title="Quick access panel"><img alt="Quick access panel" src="/uploads/editor/screens/screen5.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen6.jpg" data-lightbox="zira-editor" data-title="Syntax highlighting for PHP, JS, CSS, HTML"><img alt="Syntax highlighting for PHP, JS, CSS, HTML" src="/uploads/editor/screens/screen6.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen7.jpg" data-lightbox="zira-editor" data-title="Highlight matching tags"><img alt="Highlight matching tags" src="/uploads/editor/screens/screen7.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen8.jpg" data-lightbox="zira-editor" data-title="Highlight matching php expression"><img alt="Highlight matching php expression" src="/uploads/editor/screens/screen8.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen9.jpg" data-lightbox="zira-editor" data-title="Color preview"><img alt="Color preview" src="/uploads/editor/screens/screen9.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen10.jpg" data-lightbox="zira-editor" data-title="Highlight matching braces"><img alt="Highlight matching braces" src="/uploads/editor/screens/screen10.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen11.jpg" data-lightbox="zira-editor" data-title="Search and replace text"><img alt="Search and replace text" src="/uploads/editor/screens/screen11.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen12.jpg" data-lightbox="zira-editor" data-title="Built-in color picker"><img alt="Built-in color picker" src="/uploads/editor/screens/screen12.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen13.jpg" data-lightbox="zira-editor" data-title="Dockable sidebar, toolbar and output panel"><img alt="Dockable sidebar, toolbar and output panel" src="/uploads/editor/screens/screen13.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen14.jpg" data-lightbox="zira-editor" data-title="Git integration"><img alt="Git integration" src="/uploads/editor/screens/screen14.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen15.jpg" data-lightbox="zira-editor" data-title="Source map preview"><img alt="Source map preview" src="/uploads/editor/screens/screen15.jpg" /></a></li>
-<li><a href="/uploads/editor/screens/screen16.jpg" data-lightbox="zira-editor" data-title="Layout for wide screens"><img alt="Layout for wide screens" src="/uploads/editor/screens/screen16.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen1.jpg" data-lightbox="zira-editor" data-title="Autocomplete classes, functions & variables"><img alt="Autocomplete classes, functions & variables" src="/uploads/editor/thumbs/screen1.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen2.jpg" data-lightbox="zira-editor" data-title="Function arguments display"><img alt="Function arguments display" src="/uploads/editor/thumbs/screen2.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen3.jpg" data-lightbox="zira-editor" data-title="F1 Help"><img alt="F1 Help" src="/uploads/editor/thumbs/screen3.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen4.jpg" data-lightbox="zira-editor" data-title="File symbols navigator"><img alt="File symbols navigator" src="/uploads/editor/thumbs/screen4.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen5.jpg" data-lightbox="zira-editor" data-title="Quick access panel"><img alt="Quick access panel" src="/uploads/editor/thumbs/screen5.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen6.jpg" data-lightbox="zira-editor" data-title="Syntax highlighting for PHP, JS, CSS, HTML"><img alt="Syntax highlighting for PHP, JS, CSS, HTML" src="/uploads/editor/thumbs/screen6.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen7.jpg" data-lightbox="zira-editor" data-title="Highlight matching tags"><img alt="Highlight matching tags" src="/uploads/editor/thumbs/screen7.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen8.jpg" data-lightbox="zira-editor" data-title="Highlight matching php expression"><img alt="Highlight matching php expression" src="/uploads/editor/thumbs/screen8.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen9.jpg" data-lightbox="zira-editor" data-title="Color preview"><img alt="Color preview" src="/uploads/editor/thumbs/screen9.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen10.jpg" data-lightbox="zira-editor" data-title="Highlight matching braces"><img alt="Highlight matching braces" src="/uploads/editor/thumbs/screen10.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen11.jpg" data-lightbox="zira-editor" data-title="Search and replace text"><img alt="Search and replace text" src="/uploads/editor/thumbs/screen11.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen12.jpg" data-lightbox="zira-editor" data-title="Built-in color picker"><img alt="Built-in color picker" src="/uploads/editor/thumbs/screen12.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen13.jpg" data-lightbox="zira-editor" data-title="Dockable sidebar, toolbar and output panel"><img alt="Dockable sidebar, toolbar and output panel" src="/uploads/editor/thumbs/screen13.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen14.jpg" data-lightbox="zira-editor" data-title="Git integration"><img alt="Git integration" src="/uploads/editor/thumbs/screen14.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen15.jpg" data-lightbox="zira-editor" data-title="Source map preview"><img alt="Source map preview" src="/uploads/editor/thumbs/screen15.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen16.jpg" data-lightbox="zira-editor" data-title="Layout for wide screens"><img alt="Layout for wide screens" src="/uploads/editor/thumbs/screen16.jpg" /></a></li>
 </ul>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+</div>
+</div>
+<div class="download-wrapper">
+<div class="container">
 <div class="zira-editor-download-wrapper">
-<a href="https://github.com/ziracms/editor/releases" class="zira-cms-download-btn">Download Zira Editor</a>
+<a href="https://github.com/ziracms/editor/releases" class="zira-cms-download-btn">Download from GitHub</a>
 </div>
 <div class="zira-editor-download-wrapper">
 <a href="https://play.google.com/store/apps/details?id=com.github.ziracms.editor"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200" /></a>
-</div>
 </div>
 </article>
 </main>
@@ -196,7 +263,8 @@ blockquote {
 <footer>
 <div class="container">
 <div class="row">
-<p><a href="https://github.com/ziracms/editor">Zira PHP Editor</a> - Lightweight IDE for Linux, Android and Raspberry Pi.</p>
+<p><a href="https://github.com/ziracms/editor">Zira PHP Editor</a> - Lightweight IDE for Linux, Android and Raspberry Pi.<br />Developed with <a href="https://www.qt.io/development-tools">Qt Creator</a> in <a href="https://www.opensuse.org">openSUSE Leap</a>.</p>
+<p>&copy;2019 Zira Project.</p>
 </div>
 </div>
 </footer>
