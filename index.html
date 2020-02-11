@@ -4,256 +4,244 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="/assets/images/zira.png" />
 <meta charset="utf-8" />
-<title>Zira CMS - бесплатная CMS для сайта с оконным интерфейсом</title>
-<meta name="keywords" content="zira, cms, сайт, система, удобная, простая, быстрая, управление, администрирование, php, mysql, sqlite" />
-<meta name="description" content="Zira CMS привносит возможности десктопа в ваш сайт. Простая и быстрая установка. Поддержка как MySQL, так и SQLite." />
-<meta property="og:site_name" content="Zira" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Zira CMS - бесплатная CMS для сайта с оконным интерфейсом" />
-<meta property="og:description" content="Zira CMS привносит возможности десктопа в ваш сайт. Простая и быстрая установка. Поддержка как MySQL, так и SQLite." />
+<title>Zira Project - Софт для продвинутых пользователей</title>
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
 <link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
 <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
 <link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<style>
+.screen-list li {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1% 2% 0;
+    box-shadow: 0px 0px 1px #e0ffde;
+    transition: margin-top 500ms ease;
+}
+.screen-list li:hover {
+    box-shadow: 0px 0px 1px #5e6b5d;
+}
+.screen-list li:nth-child(2n) {
+    margin-right: 0;
+    transition-delay: 100ms;
+}
+.screen-list li a {
+    display: block;
+}
+.screen-list li a img {
+    width: 100%;
+}
+.zira-editor-download-wrapper {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#welcome-screen {
+    position: relative;
+    height: 100%;
+    background: #751601;
+}
+.demo-wrapper {
+    background-color: #222628;
+    color: #fff;
+    padding: 20px 0px;
+}
+.zira-demo-wrapper {
+    background-color: #d8cceb;
+    padding: 20px 0px;
+}
+.zira-title-wrapper {
+    padding: 40px 0px 80px;
+    color: #000;
+    font-size: 130%;
+    background: #f2f525 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
+    text-shadow: 0px 1px 1px #fff;
+}
+.title-wrapper {
+    /*    background-color: #efb103;*/
+    padding: 40px 0px 80px;
+    color: #000;
+    font-size: 130%;
+    background: #efb103 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
+    text-shadow: 0px 1px 1px #fff;
+}
+.zira-title-wrapper a:link,
+.zira-title-wrapper a:visited,
+.title-wrapper a:link,
+.title-wrapper a:visited {
+    color: #333;
+    text-decoration: none;
+}
+.zira-title-wrapper a:hover,
+.title-wrapper a:hover {
+    color: #6e00ff;
+}
+.zira-cms-download-btn:link,
+.zira-cms-download-btn:visited {
+    font-size: 200%;
+    padding: 30px 60px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+footer {
+    margin-top: 0;
+    background: #080c13;
+    border: none;
+}
+blockquote {
+    background-color: #0f191d;
+    border-left: 10px solid #dbedff;
+    border-right: 10px solid #dbedff;
+    margin-bottom: 0px;
+    font-size: 120%;
+    color: #7ea6bd;
+    padding: 20px 40px;
+}
+.page-header,
+.page-header h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 150%;
+    margin-bottom: 50px;
+}
+</style>
 <!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
 <!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
 </head>
-<body class="home-page">
-<div class="zira-cms-block" id="zira-cms-block">
-<div class="zira-cms-wrapper">
-    <a href="javascript:void(0)" class="zira-cms-presentation-close-btn"><span class="glyphicon glyphicon-download"></span></a>
-    <div class="zira-cms-container">
-        <div class="zira-cms-container-content">
-            <h2 class="zira-cms-title"><a href="/zira">Zira CMS</a></h2>
-            <p class="zira-cms-description">
-                Самая удобная система управления сайтом
-                <br />с оконным интерфейсом.
-                <br />Встроенный файловый менеджер, галерея, слайдер,
-                <br />интеграция с социальными сетями прямо из коробки!
-            </p>
-        </div>
-        <div class="zira-cms-container-content">
-            <div class="zira-cms-presentation-wrapper">
-                <img src="/assets/images/blank.png" data-rel="/uploads/presentation/zira-cms-presentation-wnd-1.png" alt="Zira CMS" class="zira-cms-presentation zira-cms-presentation-wnd-1" />
-                <img src="/assets/images/blank.png" data-rel="/uploads/presentation/zira-cms-presentation-wnd-2.png" alt="Zira CMS" class="zira-cms-presentation zira-cms-presentation-wnd-2" />
-            </div>
-        </div>
-    </div>
-    <div class="zira-cms-download-wrapper">
-        <a href="/ziracms/download.html" class="zira-cms-download-btn">Скачать бесплатно</a>
-    </div>
+<body class="page">
+<div id="welcome-screen">
+<img id="zira-project-img" src="/assets/images/blank.png" data-rel="/uploads/zira/zira.png" width="250" height="200" alt="Zira Project" />
 </div>
-</div><div id="main-container-wrapper"><div id="main-container">
-<header>
-<div class="container">
-<div class="row">
-<ul id="user-menu" class="not-authorized usermenu-popup">
-<li class="menu-item">
-<a href="/ziracms/download.html" class="menu-link"> Скачать</a>
-</li>
-</ul>
-<div id="site-logo-wrapper"><a id="site-logo" href="/" title="Zira"><img src="/assets/images/zira.png" alt="Zira" width="80" height="80" /><span>Zira</span></a><p id="site-slogan"><span>CMS с оконным интерфейсом</span></p></div>
-<div id="top-menu-wrapper">
-<nav class="navbar navbar-default">
-<div class="container-fluid">
-<div class="navbar-header">
-<div class="top-menu-logo top-menu-header-logo"><a href="/" title="Zira"><img src="/assets/images/zira.png" alt="Zira" /><span>Zira</span></a></div>
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-menu-container" aria-expanded="false">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-</div>
-<div class="collapse navbar-collapse" id="top-menu-container">
-<ul class="nav navbar-nav">
-<li class="top-menu-logo">
-<a href="/" title="Zira"><img src="/assets/images/zira.png" alt="Zira" /><span>Zira</span></a></li>
-<li class="menu-item active"><a href="/" title="Главная" class="menu-link">Главная</a></li>
-<li class="menu-item"><a href="/ziracms.html" title="Описание Zira CMS" class="menu-link">Описание</a></li>
-<li class="menu-item"><a href="/ziracms/install.html" title="Установка Zira CMS" class="menu-link">Установка</a></li>
-<li class="menu-item"><a href="/ziracms/update.html" title="Обновление Zira CMS" class="menu-link">Обновление</a></li>
-</ul>
-</div>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</header>
-<div class="container">
-<div class="row">
-<div id="content" class="col-sm-8">
+<div id="main-container-wrapper"><div id="main-container">
+<div id="content">
 <main>
 <article>
-<div class="page-header">
-<h1>Zira CMS</h1>
-</div>
-<div class="article parse-content">
-<p>Zira CMS - это лёгкая, простая в управлении, и в то-же время гибкая система управления сайтом.</p>
-<p>Устанавливая Zira CMS, вы&nbsp;сразу из коробки получаете наиболее часто используемые функции, такие как удобный файловый менеджер, галерея, слайдер, интеграция с социальными сетями и др. Нет необходимости в дополнительном скачивании и настройке различных плагинов и скриптов.</p>
-<p>&nbsp;</p>
-<p><img class="image" src="/uploads/zira/screens/screen-1.jpg" alt="Zira CMS" width="800" height="400" /></p>
-<p>Zira CMS привносит возможности рабочего стола в ваш сайт. Удобный и понятный оконный интерфейс позволит без труда разобраться в управлении даже новичку. Открывайте несколько окон паралельно, сворачивайте или разворачивайте их на весь экран. В общем работайте так, как вы привыкли это делать на своём десктопе.</p>
-<p>&nbsp;</p>
-<p><img class="image" src="/uploads/zira/screens/screen-2.jpg" alt="Редактор Zira CMS" width="800" height="400" /></p>
-<p>Zira CMS может работать как на <strong>MySQL</strong>, так и на <strong>SQLite</strong>. Имеется функция снятия дампа базы данных и архивации папок с загруженными файлами, что упрощает процедуру бэкапа сайта.</p>
-<p>Для опытных мастеров Zira CMS предоставляет возможность работы с собственной консолью.</p>
-<p>&nbsp;</p>
-<p style="text-align: justify;"><img class="image" src="/uploads/zira/screens/screen-3.jpg" alt="Виджеты Zira CMS" width="800" height="400" /></p>
-<p>Встроенный текстовый редактор автоматически сохранит введенный текст в черновик и предложит вам его открыть в следующий раз, если вы забудите сохранить запись.</p>
-<p>Гибкая система меню и категорий позволит создать любую структуру сайта с неограниченной вложенностью. А благодаря HTML-блокам, вы сможете вставить в желаемую часть страницы любой код.</p>
-<p>&nbsp;</p>
-<p><img class="image" src="/uploads/zira/screens/screen-4.jpg" alt="Файловый менеджер Zira CMS" width="800" height="400" /></p>
-<p>Благодаря оптимизации, система работает очень быстро и не требует больших ресурсов.</p>
-<p>Zira CMS имеет поддержку модулей. Это позволит расширять возможности системы в будущем и не ограничиваться стандартным набором функций.</p>
-<p>И самое главное, Zira CMS можно скачать и установить совершенно бесплатно!</p>
-<p>Более подробную информацию вы можете найти в описании Zira CMS.</p></div>
-<div id="vk_like"></div>
-</article>
-</main>
-<div id="vk_comments"></div>
-</div>
-<div class="col-sm-4 sidebar">
-<aside>
-<div class="block widget-category-wrapper">
-<div class="page-header">
-<h2 class="widget-title">Новости</h2>
-</div>
-<ul class="widget-list list">
-<li class="list-item no-thumb">
-<h3 class="list-title-wrapper">
-<a class="list-title" href="/news/2019-12-03.html" title="Вышла Zira CMS 1.5.0">Вышла Zira CMS 1.5.0</a>
-</h3>
-<div class="list-content-wrapper">
-<p>Встречайте новый модуль Push-уведомлений в новой версии Zira CMS!</p>
-</div>
-</li>
-<li class="list-item no-thumb">
-<h3 class="list-title-wrapper">
-<a class="list-title" href="/news/2019-11-18.html" title="Zira CMS переехала на GitHub">Zira CMS переехала на GitHub</a>
-</h3>
-<div class="list-content-wrapper">
-<p>Уважаемые пользователи!<br />
-Проект Zira CMS переехал на GitHub.  Теперь всю последнюю информацию об обновлениях вы сможете узнавать здесь.
+<div class="zira-cms-block" id="zira-cms-block">
+<div class="zira-cms-wrapper">
+<div class="zira-cms-container">
+<div class="zira-cms-container-content">
+<h2 class="zira-cms-title"><a href="/details.html">Zira CMS</a></h2>
+<p class="zira-cms-description">
+Самая удобная система управления сайтом
+<br />с оконным интерфейсом.
+<br />Встроенный файловый менеджер, галерея, слайдер,
+<br />интеграция с социальными сетями прямо из коробки!
 </p>
 </div>
-</li>
-</ul>
+<div class="zira-cms-container-content">
+<div class="zira-cms-presentation-wrapper">
+<img src="/assets/images/blank.png" data-rel="/uploads/presentation/zira-cms-presentation-wnd-1.png" alt="Zira CMS" class="zira-cms-presentation zira-cms-presentation-wnd-1" />
+<img src="/assets/images/blank.png" data-rel="/uploads/presentation/zira-cms-presentation-wnd-2.png" alt="Zira CMS" class="zira-cms-presentation zira-cms-presentation-wnd-2" />
 </div>
-<div id="secondary-menu-wrapper">
-<nav>
-<ul class="nav nav-pills nav-stacked">
-<li class="menu-item"><a href="https://github.com/ziracms/zira" title="Репозиторий Zira CMS" class="menu-link">Репозиторий</a></li>
-<li class="menu-item"><a href="https://vk.com/ziracms.public" title="Сообщество Zira CMS" class="menu-link">Сообщество</a></li>
-<li class="menu-item"><a href="/ziracms/download.html" title="Скачать Zira CMS" class="menu-link download-link">Скачать</a></li>
-</ul>
-</nav>
 </div>
-<div class="secondary-custom-menu-wrapper">
-<nav>
-<ul class="nav nav-pills nav-stacked">
-<li class="menu-item"><a href="/ziracms/requirements.html" title="Системные требования Zira CMS" class="menu-link">Системные требования</a></li>
-<li class="menu-item"><a href="/ziracms/shortcuts.html" title="Горячие клавиши Zira CMS" class="menu-link">Горячие клавиши</a></li>
-<li class="menu-item"><a href="/ziracms/settings.html" title="Настройка Zira CMS" class="menu-link">Настройка системы</a></li>
-<li class="menu-item"><a href="/ziracms/filemanager.html" title="Работа с файлами в Zira CMS" class="menu-link">Работа с файлами</a></li>
-<li class="menu-item"><a href="/ziracms/publication.html" title="Публикация записей в Zira CMS" class="menu-link">Публикация записей</a></li>
-<li class="menu-item"><a href="/ziracms/menu.html" title="Редактор меню Zira CMS" class="menu-link">Редактор меню</a></li>
-<li class="menu-item"><a href="/ziracms/widgets.html" title="Управление виджетами Zira CMS" class="menu-link">Управление виджетами</a></li>
-<li class="menu-item"><a href="/ziracms/integration.html" title="Интеграция Zira CMS с социальными сетями" class="menu-link">Интеграция с соц. сетями</a></li>
-<li class="menu-item"><a href="/ziracms/console.html" title="Работа с консолью Zira CMS" class="menu-link">Работа с консолью</a></li>
-</ul>
-</nav>
 </div>
-<div id="vk_groups"></div>
-</aside>
+</div>
+</div>
+<div class="zira-demo-wrapper">
+<div class="container">
+<video width="100%" controls autoplay muted>
+<source src="/uploads/zira/video/demo.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<div class="zira-title-wrapper">
+<div class="container">
+<div class="page-header">
+<h1><a href="/details.html">Zira CMS</a></h1>
+</div>
+<p>Zira CMS привносит возможности рабочего стола в ваш сайт. Удобный и понятный оконный интерфейс позволит без труда разобраться в управлении даже новичку.</p>
+<p>Открывайте несколько окон параллельно, сворачивайте или разворачивайте их на весь экран. В общем работайте так, как вы привыкли это делать на своём десктопе.</p>
+</div>
+</div>
+<div class="demo-wrapper">
+<div class="container">
+<video width="100%" controls>
+<source src="/uploads/editor/ziracast.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<div class="title-wrapper">
+<div class="container">
+<div class="page-header">
+<h1><a href="/editor/ru/index.html">Zira PHP Editor</a></h1>
+</div>
+<p>Если Вы ищете альтернативу Geany для KDE, Вы должны попробовать Zira Editor.</p>
+<p>Zira Editor - это лёгкий и быстрый PHP редактор для Linux, Android и Raspberry Pi с подсветкой синтаксиса и авто-дополнением.</p>
 </div>
 </div>
 </div>
 <footer>
 <div class="container">
 <div class="row">
-<div id="footer-menu-wrapper">
-<nav>
-<ul class="menu">
-<li class="menu-item"><a href="/" title="Главная" class="menu-link">Главная</a></li>
-<li class="menu-item-separator"></li>
-<li class="menu-item">
-<a href="/" title="Zira CMS" class="menu-link">Zira CMS <span class="caret"></span></a>
-<ul class="footer-child-menu">
-<li><a href="/ziracms.html" title="Описание Zira CMS">Описание</a></li>
-<li><a href="/ziracms/install.html" title="Установка Zira CMS">Установка</a></li>
-<li><a href="/ziracms/update.html" title="Обновление Zira CMS">Обновление</a></li>
-<!--<li><a href="/ziracms/download.html" title="Скачать Zira CMS">Скачать</a></li>-->
-<li><a href="https://github.com/ziracms/zira" title="Репозиторий Zira CMS">Репозиторий</a></li>
-</ul>
-</li>
-<li class="menu-item-separator"></li>
-<li class="menu-item"><a href="https://money.yandex.ru/to/410014796567498" title="Помощь проекту" class="menu-link">Помощь проекту</a></li>
-<li class="menu-item-separator"></li>
-<li class="menu-item"><a href="/contacts.html" title="Контакты" class="menu-link">Контакты</a></li>
-</ul>
-</nav>
-</div>
-<p><a href="https://github.com/ziracms/zira">Zira CMS</a> - бесплатная система управления сайтом.</p>
+<p>&copy;2019 Zira Project.<br />Контактный email: <a href="javascript:void(0)" onmousedown="this.href='mai'+'lto:'+'ziracm'+'s@g'+'mai'+'l.c'+'om';"><span>ziracms</span>@<span>gmail.com</span></a></p>
 </div>
 </div>
 </footer>
 </div></div><!--/main-container-wrapper-->
-<a href="javascript:void(0)" class="scroll-top" title="Наверх"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<a href="javascript:void(0)" class="scroll-top" title="Up"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
 <div id="vk_community_messages"></div>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
-<script src="/theme/js/extra.js"></script>
+<!--<script src="/theme/js/extra.js"></script>-->
+<script type="text/javascript">zira_base = '/';zira_scroll_effects_enabled = false;zira_show_images_description = false;</script>
 <script src="/assets/js/zira.js"></script>
 <script src="/assets/js/parse.js"></script>
 <script src="/assets/js/lightbox.min.js"></script>
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js?162"></script>
-<script type="text/javascript" src="/assets/plugins/vk.js"></script>
 <script src="/assets/plugins/spread.js"></script>
 <script type="text/javascript">
 (function($){
     $(document).ready(function(){
-        $('.zira-cms-presentation-close-btn').click(function(){
-          $('html,body').animate({scrollTop:$('header').offset().top}, 400);
-        });
+        $('img#zira-project-img').hide();
+        $('img#zira-project-img').load(zira_project_load);
+        $('img#zira-project-img').attr('src', $('img#zira-project-img').data('rel'));
         
-      	if (typeof window.orientation == "undefined") {
-        	$(window).scroll(zira_cms_presentation_scroll);
-      	}
-      
         $('img.zira-cms-presentation-wnd-1').load(zira_cms_presenation_load_1);
         $('img.zira-cms-presentation-wnd-1').attr('src', $('img.zira-cms-presentation-wnd-1').data('rel'));
         $('img.zira-cms-presentation-wnd-2').load(zira_cms_presenation_load_2);
         $('img.zira-cms-presentation-wnd-2').attr('src', $('img.zira-cms-presentation-wnd-2').data('rel'));
     });
-  
-  	zira_cms_presentation_scroll = function(){
-      	$(window).off('scroll', zira_cms_presentation_scroll);
-    	$('html,body').animate({scrollTop:$('header').offset().top}, 400);
+    
+    zira_project_load = function() {
+        $('img#zira-project-img').show();
+        var imgWidth = $('img#zira-project-img').width();
+        var imgHeight = $('img#zira-project-img').height();
+        $('img#zira-project-img').css({
+            'position': 'absolute',
+            'left': ($(window).width() - imgWidth)/2,
+            'top': ($(window).height() - imgHeight)/2
+        }).data('top', ($(window).height() - imgHeight)/2);
     };
 
+    $(window).resize(function(){
+        if (typeof $('img#zira-project-img').data('top') != "undefined") {
+            zira_project_load();
+        }
+    });
+    
     zira_cms_presenation_load_1 = function() {
         zira_cms_presenation_load_1.loaded = true;
         zira_cms_presenation_load();
     };
-
+    
     zira_cms_presenation_load_2 = function() {
         zira_cms_presenation_load_2.loaded = true;
         zira_cms_presenation_load();
     };
-
+    
     zira_cms_presenation_load = function() {
         if (typeof zira_cms_presenation_load_1.loaded != "undefined" &&
-            zira_cms_presenation_load_1.loaded &&
-            typeof zira_cms_presenation_load_2.loaded != "undefined" &&
-            zira_cms_presenation_load_2.loaded
+        zira_cms_presenation_load_1.loaded &&
+        typeof zira_cms_presenation_load_2.loaded != "undefined" &&
+        zira_cms_presenation_load_2.loaded
         ) {
             zira_cms_presentation();
         }
     };
-
+    
     zira_cms_presentation = function() {
         var wnd1 = $('.zira-cms-container-content .zira-cms-presentation-wnd-1');
         var wnd2 = $('.zira-cms-container-content .zira-cms-presentation-wnd-2');
@@ -276,13 +264,81 @@
 </script>
 <script type="text/javascript">
 (function($){
+    function onResize() {
+        var windowHeight = $(window).height();
+        $('#zira-cms-block').css('height', windowHeight);
+    }
+    $(window).resize(onResize);
     $(document).ready(function(){
-        $('#zira-cms-block').ziraSpread({
+        onResize();
+        $('#welcome-screen').ziraSpread({
             interval: 50,
-            delay: 500
+            createInterval: 1000,
+            randomizeAngle: true,
+            xAxisWidth: 100,
+            points: 20,
+            minSize: 3,
+            maxSize: 5,
+            delay: 0,
+            execTime: 0
         });
     });
 })(jQuery);
+</script>
+<script type="text/javascript">
+if (typeof requestAnimationFrame != "undefined") {
+    var titlePaddingTop = 0;
+    var titleStartHeight = 0;
+    function parallax() {
+        var windowHeight = $(window).height();
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop < windowHeight && typeof $('#zira-project-img').data('top') != "undefined") {
+            var imgTop = parseInt($('#zira-project-img').data('top'));
+            var offset = scrollTop * (windowHeight - imgTop) / windowHeight;
+            //console.log(offset)
+            $('#zira-project-img').css('top', imgTop + offset+"px");
+        }
+        
+        var titleTop = $('.zira-title-wrapper').offset().top;
+        var titleHeight = $('.zira-title-wrapper').height();
+        if (scrollTop + windowHeight > titleTop) {
+            var offset = scrollTop + windowHeight - titleTop - 3*titleHeight;
+            var offsetP = offset * 100 / (titleHeight * 3);
+            if (offsetP < titleHeight) {
+                $('.zira-title-wrapper').css('background-position', '50% '+offsetP+"%");
+            }
+            if (titlePaddingTop > 0 && titleStartHeight > 0) {
+                var padding = scrollTop + windowHeight - titleTop - titleStartHeight;
+                var paddingP = titlePaddingTop + (padding / titleStartHeight) * titlePaddingTop;
+                if (paddingP < titlePaddingTop * 3) {
+                    $('.zira-title-wrapper').css('paddingTop', paddingP);
+                }
+            }
+        }
+        var titleTop = $('.title-wrapper').offset().top;
+        var titleHeight = $('.title-wrapper').height();
+        if (scrollTop + windowHeight > titleTop) {
+            var offset = scrollTop + windowHeight - titleTop - 3*titleHeight;
+            var offsetP = offset * 100 / (titleHeight * 3);
+            if (offsetP < titleHeight) {
+                $('.title-wrapper').css('background-position', '50% '+offsetP+"%");
+            }
+            if (titlePaddingTop > 0 && titleStartHeight > 0) {
+                var padding = scrollTop + windowHeight - titleTop - titleStartHeight;
+                var paddingP = titlePaddingTop + (padding / titleStartHeight) * titlePaddingTop;
+                if (paddingP < titlePaddingTop * 3) {
+                    $('.title-wrapper').css('paddingTop', paddingP);
+                }
+            }
+        }
+        requestAnimationFrame(parallax);
+    }
+    $(document).ready(function(){
+        titlePaddingTop = parseInt($('.title-wrapper').css('paddingTop'));
+        titleStartHeight = parseInt($('.title-wrapper').height());
+        requestAnimationFrame(parallax);
+    });
+}
 </script>
 </body>
 </html>
