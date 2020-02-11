@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/images/zira.png" />
+<meta charset="utf-8" />
+<title>Zira PHP Editor - Быстрый редактор для Linux, Android и Raspberry Pi</title>
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/zira.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/theme/css/extra.css" />
+<style>
+.screen-list li {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1% 2% 0;
+    box-shadow: 0px 0px 1px #e0ffde;
+    transition: margin-top 500ms ease;
+}
+.screen-list li:hover {
+    box-shadow: 0px 0px 1px #5e6b5d;
+}
+.screen-list li:nth-child(2n) {
+    margin-right: 0;
+    transition-delay: 100ms;
+}
+.screen-list li a {
+    display: block;
+}
+.screen-list li a img {
+    width: 100%;
+}
+.zira-editor-download-wrapper {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.demo-wrapper {
+    background-color: #222628;
+    color: #fff;
+    padding: 20px 0px;
+}
+.title-wrapper {
+/*    background-color: #efb103;*/
+    padding: 40px 0px 80px;
+    color: #000;
+    font-size: 150%;
+    background: #efb103 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
+}
+.screens-wrapper {
+    background-color: #060205;
+    color: #fff;
+    padding: 20px 0px;
+}
+.features-wrapper {
+    background-color: #7ea6bd;
+}
+.download-wrapper {
+    padding: 120px 0px 50px;
+    background-color: #11271d;
+}
+.zira-cms-download-btn:link, 
+.zira-cms-download-btn:visited {
+    font-size: 200%;
+    padding: 30px 60px;
+    border-radius: 40px;
+    font-weight: bold;
+}
+header {
+    margin-bottom: 0;
+    min-height: 165px;
+}
+footer {
+    margin-top: 0;
+    background: #080c13;
+    border: none;
+}
+blockquote {
+    background-color: #0f191d;
+    border-left: 10px solid #dbedff;
+    border-right: 10px solid #dbedff;
+    margin-bottom: 0px;
+    font-size: 120%;
+    color: #7ea6bd;
+    padding: 20px 40px;
+}
+.page-header,
+.page-header h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    font-size: 150%;
+    margin-bottom: 50px;
+}
+.screens-wrapper h2 {
+    color: #ff04c9;
+    font-size: 180%;
+}
+</style>
+<!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
+<!--[if lt IE 9]><link href="/theme/css/ie8.css" type="text/css" rel="stylesheet" /><![endif]-->
+</head>
+<body class="page">
+<div id="main-container-wrapper"><div id="main-container">
+<header>
+<div class="container">
+<div class="row">
+<ul id="user-menu" class="not-authorized usermenu-popup">
+<li class="menu-item">
+<a href="https://github.com/ziracms/zira" class="menu-link"> Zira CMS</a>
+</li>
+</ul>
+<div id="site-logo-wrapper" style="margin-top:38px"><a id="site-logo" href="/" title="Zira Project"><img src="/assets/images/zira.png" alt="Zira Project" width="80" height="80" /><span>Zira Project</span></a><p id="site-slogan"><span>Софт для продвинутых пользователей</span></p></div>
+</div>
+</div>
+</header>
+<div id="content">
+<main>
+<article>
+<div class="demo-wrapper">
+<div class="container">
+<video width="100%" controls autoplay muted>
+<source src="/uploads/editor/ziracast.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<div class="title-wrapper">
+<div class="container">
+<div class="page-header">
+<h1>Zira PHP Editor</h1>
+</div>
+<p>Если Вы ищете альтернативу Geany для KDE, Вы должны попробовать Zira Editor.</p>
+<p>Zira Editor - это лёгкий и быстрый PHP редактор для Linux, Android и Raspberry Pi с подсветкой синтаксиса и авто-дополнением.</p>
+</div>
+</div>
+<div class="features-wrapper">
+<div class="container">
+<blockquote>
+<h3>Основные функции:</h3>
+<ul>
+<li>небольшое использование памяти</li>
+<li>быстрый парсер</li>
+<li>подсветка синтаксиса</li>
+<ul>
+<li>PHP</li>
+<li>JavaScript</li>
+<li>CSS</li>
+<li>HTML</li>
+</ul>
+<li>авто-дополнение</li>
+<ul>
+<li>встроенные PHP функции и классы</li>
+<li>классы, функции и переменные проекта</li>
+<li>JS объекты, переменные</li>
+<li>CSS селекторы, свойства</li>
+<li>HTML теги</li>
+</ul>
+<li>проверка неиспользованных переменных</li>
+<li>браузер файлов</li>
+<li>навигатор по символам файла</li>
+<li>подсветка соответствующей пары</li>
+<ul>
+<li>скобок</li>
+<li>тегов</li>
+<li>php выражения (endif; endforeach;)</li>
+</ul>
+<li>подсказка аргументов функции</li>
+<li>авто-импорт классов</li>
+<li>комментирование множества строк</li>
+<li>сохранение состояния проекта при выходе</li>
+<li>Помощь F1(требуется скачать мануал PHP)</li>
+<ul>
+<li>документация php функций</li>
+<li>документация php классов</li>
+<li>документация методов php классов</li>
+</ul>
+<li>интеграция с php lint(проверка синтаксиса)</li>
+<li>интеграция с php code sniffer</li>
+<li>интеграция с git</li>
+<ul>
+<li>статус-браузер</li>
+<li>показ аннотаций</li>
+</ul>
+<li>поддержка sass</li>
+<li>панель быстрого доступа (поиск файлов + символов)</li>
+<li>переход к декларации</li>
+<ul>
+<li>функций</li>
+<li>классов</li>
+<li>методов классов</li>
+</ul>
+<li>поиск в файлах</li>
+<li>плагин проверки орфографии (библиотека Hunspell должна быть установлена)</li>
+<li>встроенный диалог выбора цвета</li>
+<li>встроенные светлая и темная темы</li>
+<li>поддержка кастомных тем</li>
+</ul>
+<h3>Тестировалось на:</h3>
+<ul>
+<li>OpenSuSe Leap 15.0</li>
+<li>OpenSuSe Leap 15.1</li>
+<li>Raspbian Buster</li>
+</ul>
+
+<h3>Для работы требуются:</h3>
+<ul>
+<li>Qt 5.10+ (рекомендуется 5.12.6)</li>
+<li>Hunspell (опционально)</li>
+</ul>
+
+<h3>Установка:</h3>
+<ul>
+<li>скачайте и распакуйте ZIP-архив (x86-64-Qt-5.12.6)</li>
+<li>запустите install.sh</li>
+</ul>
+
+<h3>Установка в Raspbian:</h3>
+<ul>
+<li>установите qt5-default (libhunspell требуется для работы плагина проверки орфографии)</li>
+<li>скачайте и распакуйте ZIP-архив (armv7)</li>
+<li>запустите install.sh</li>
+</ul>
+</blockquote>
+</div>
+</div>
+<div class="screens-wrapper">
+<div class="container">
+<h2>Скриншоты:</h2>
+<ul class="list screen-list">
+<li><a href="/uploads/editor/screens/screen1.jpg" data-lightbox="zira-editor" data-title="Авто-дополнение классов, функций и переменных"><img alt="Авто-дополнение классов, функций и переменных" src="/uploads/editor/thumbs/screen1.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen2.jpg" data-lightbox="zira-editor" data-title="Подсказка агрументов функции"><img alt="Подсказка агрументов функции" src="/uploads/editor/thumbs/screen2.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen3.jpg" data-lightbox="zira-editor" data-title="Помощь F1"><img alt="Помощь F1" src="/uploads/editor/thumbs/screen3.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen4.jpg" data-lightbox="zira-editor" data-title="Навигатор по символам файла"><img alt="Навигатор по символам файла" src="/uploads/editor/thumbs/screen4.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen5.jpg" data-lightbox="zira-editor" data-title="Панель быстрого доступа"><img alt="Панель быстрого доступа" src="/uploads/editor/thumbs/screen5.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen6.jpg" data-lightbox="zira-editor" data-title="Подсветка синтаксиса PHP, JS, CSS, HTML"><img alt="Подсветка синтаксиса PHP, JS, CSS, HTML" src="/uploads/editor/thumbs/screen6.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen7.jpg" data-lightbox="zira-editor" data-title="Подсветка соответствующей пары тегов"><img alt="Подсветка соответствующей пары тегов" src="/uploads/editor/thumbs/screen7.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen8.jpg" data-lightbox="zira-editor" data-title="Подсветка соответствующей пары php выражения"><img alt="Подсветка соответствующей пары php выражения" src="/uploads/editor/thumbs/screen8.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen9.jpg" data-lightbox="zira-editor" data-title="Показ цвета"><img alt="Показ цвета" src="/uploads/editor/thumbs/screen9.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen10.jpg" data-lightbox="zira-editor" data-title="Подсветка соответствующей пары скобок"><img alt="Подсветка соответствующей пары скобок" src="/uploads/editor/thumbs/screen10.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen11.jpg" data-lightbox="zira-editor" data-title="Поиск и замена текста"><img alt="Поиск и замена текста" src="/uploads/editor/thumbs/screen11.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen12.jpg" data-lightbox="zira-editor" data-title="Встроенный диалог выбора цвета"><img alt="Встроенный диалог выбора цвета" src="/uploads/editor/thumbs/screen12.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen13.jpg" data-lightbox="zira-editor" data-title="Перетаскиваемые боковая панель, панель инструментов и панель вывода"><img alt="Перетаскиваемые боковая панель, панель инструментов и панель вывода" src="/uploads/editor/thumbs/screen13.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen14.jpg" data-lightbox="zira-editor" data-title="Интеграция с Git"><img alt="Интеграция с Git" src="/uploads/editor/thumbs/screen14.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen15.jpg" data-lightbox="zira-editor" data-title="Просмотр карты исходного кода"><img alt="Просмотр карты исходного кода" src="/uploads/editor/thumbs/screen15.jpg" /></a></li>
+<li><a href="/uploads/editor/screens/screen16.jpg" data-lightbox="zira-editor" data-title="Схема для широких экранов"><img alt="Схема для широких экранов" src="/uploads/editor/thumbs/screen16.jpg" /></a></li>
+</ul>
+</div>
+</div>
+<div class="download-wrapper">
+<div class="container">
+<div class="zira-editor-download-wrapper">
+<a href="https://github.com/ziracms/editor/releases" class="zira-cms-download-btn">Скачать с GitHub</a>
+</div>
+<div class="zira-editor-download-wrapper">
+<a href="https://play.google.com/store/apps/details?id=com.github.ziracms.editor"><img alt="Доступно в Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/ru_badge_web_generic.png" width="200" /></a>
+</div>
+</article>
+</main>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="row">
+<p><a href="https://github.com/ziracms/editor">Zira PHP Editor</a> - Быстрый редактор для Linux, Android и Raspberry Pi.<br />Разработан с помощью <a href="https://www.qt.io/development-tools">Qt Creator</a> на <a href="https://www.opensuse.org">openSUSE Leap</a>.</p>
+<p>&copy;2019 Zira Project.<br />Контактный email: <a href="javascript:void(0)" onmousedown="this.href='mai'+'lto:'+'ziracm'+'s@g'+'mai'+'l.c'+'om';"><span>ziracms</span>@<span>gmail.com</span></a></p>
+</div>
+</div>
+</footer>
+</div></div><!--/main-container-wrapper-->
+<a href="javascript:void(0)" class="scroll-top" title="Up"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+<div id="vk_community_messages"></div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<!--<script src="/theme/js/extra.js"></script>-->
+<script type="text/javascript">zira_base = '/';zira_scroll_effects_enabled = false;zira_show_images_description = false;</script>
+<script src="/assets/js/zira.js"></script>
+<script src="/assets/js/parse.js"></script>
+<script src="/assets/js/lightbox.min.js"></script>
+<script type="text/javascript">
+if (typeof requestAnimationFrame != "undefined") {
+    var screensItemMargin = 100;
+    function parallax() {
+        var scrollTop = $(window).scrollTop();
+        var titleTop = $('.title-wrapper').offset().top;
+        var windowHeight = $(window).height();
+        var titleHeight = $('.title-wrapper').height();
+        if (scrollTop + windowHeight > titleTop) {
+            var offset = scrollTop + windowHeight - titleTop - 3*titleHeight;
+            var offsetP = offset * 100 / titleHeight * .5;
+            $('.title-wrapper').css('background-position', '50% '+offsetP+"%");
+        }
+        var featuresTop = $('.features-wrapper').offset().top;
+        var featuresHeight = $('.features-wrapper').height();
+        var fColorR = 126;
+        var fColorG = 166;
+        var fColorB = 189;
+        var sColorR = 239;
+        var sColorG = 177;
+        var sColorB = 3;
+        var oColorR = fColorR - sColorR;
+        var oColorG = fColorG - sColorG;
+        var oColorB = fColorB - sColorB;
+        if (scrollTop + windowHeight > featuresTop) {
+            var offset = scrollTop + windowHeight - featuresTop;
+            var offsetP = offset / featuresHeight;
+            var colorR = fColorR - oColorR * offsetP;
+            var colorG = fColorG - oColorG * offsetP;
+            var colorB = fColorB - oColorB * offsetP;
+            $('.features-wrapper').css('background-color', 'rgb('+colorR+','+colorG+','+colorB+")");
+        }
+        var screensTop = $('.screens-wrapper').offset().top;
+        if (scrollTop + windowHeight > screensTop) {
+            $('.screens-wrapper ul li').each(function(){
+                var liTop = $(this).offset().top;
+                if (scrollTop + windowHeight > liTop) {
+                    $(this).css('marginTop', 0);
+                } else {
+                    $(this).css('marginTop', screensItemMargin);
+                }
+            });
+        }
+        requestAnimationFrame(parallax);
+    }
+    $(document).ready(function(){
+        $('.screens-wrapper ul li').css('marginTop', screensItemMargin);
+        requestAnimationFrame(parallax);
+    });
+}
+</script>
+</body>
+</html>
