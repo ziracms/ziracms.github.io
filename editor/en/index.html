@@ -18,12 +18,14 @@
     vertical-align: top;
     margin: 0 1% 2% 0;
     box-shadow: 0px 0px 1px #e0ffde;
+    transition: margin-top 500ms ease;
 }
 .screen-list li:hover {
     box-shadow: 0px 0px 1px #5e6b5d;
 }
 .screen-list li:nth-child(2n) {
     margin-right: 0;
+    transition-delay: 100ms;
 }
 .screen-list li a {
     display: block;
@@ -43,10 +45,11 @@
     padding: 20px 0px;
 }
 .title-wrapper {
-    background-color: #efb103;
+/*    background-color: #efb103;*/
     padding: 40px 0px 80px;
     color: #000;
     font-size: 150%;
+    background: #efb103 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
 }
 .screens-wrapper {
     background-color: #060205;
@@ -69,6 +72,7 @@
 }
 header {
     margin-bottom: 0;
+    min-height: 165px;
 }
 footer {
     margin-top: 0;
@@ -110,7 +114,7 @@ blockquote {
 <a href="https://github.com/ziracms/zira" class="menu-link"> Zira CMS</a>
 </li>
 </ul>
-<div id="site-logo-wrapper" style="margin-top:50px"><a id="site-logo" href="/" title="Zira Project"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira Project</span></a><p id="site-slogan"><span>Software for advanced users</span></p></div>
+<div id="site-logo-wrapper" style="margin-top:38px"><a id="site-logo" href="/" title="Zira Project"><img src="/assets/images/zira.png" alt="Zira CMS" width="80" height="80" /><span>Zira Project</span></a><p id="site-slogan"><span>Software for advanced users</span></p></div>
 </div>
 </div>
 </header>
@@ -216,8 +220,7 @@ blockquote {
 
 <h3>Install in Raspbian:</h3>
 <ul>
-<li>install qt5-default</li>
-<li>install hunspell</li>
+<li>install qt5-default (libhunspell is required for spellchecker)</li>
 <li>download and unpack ZIP-archive (armv7)</li>
 <li>run install.sh</li>
 </ul>
@@ -264,7 +267,7 @@ blockquote {
 <div class="container">
 <div class="row">
 <p><a href="https://github.com/ziracms/editor">Zira PHP Editor</a> - Lightweight IDE for Linux, Android and Raspberry Pi.<br />Developed with <a href="https://www.qt.io/development-tools">Qt Creator</a> in <a href="https://www.opensuse.org">openSUSE Leap</a>.</p>
-<p>&copy;2019 Zira Project.</p>
+<p>&copy;2019 Zira Project.<br />Contact email: <a href="javascript:void(0)" onmousedown="this.href='mai'+'lto:'+'ziracm'+'s@g'+'mai'+'l.c'+'om';"><span>ziracms</span>@<span>gmail.com</span></a></p>
 </div>
 </div>
 </footer>
@@ -278,5 +281,56 @@ blockquote {
 <script src="/assets/js/zira.js"></script>
 <script src="/assets/js/parse.js"></script>
 <script src="/assets/js/lightbox.min.js"></script>
+<script type="text/javascript">
+if (typeof requestAnimationFrame != "undefined") {
+    var screensItemMargin = 100;
+    function parallax() {
+        var scrollTop = $(window).scrollTop();
+        var titleTop = $('.title-wrapper').offset().top;
+        var windowHeight = $(window).height();
+        var titleHeight = $('.title-wrapper').height();
+        if (scrollTop + windowHeight > titleTop) {
+            var offset = scrollTop + windowHeight - titleTop - 3*titleHeight;
+            var offsetP = offset * 100 / titleHeight * .5;
+            $('.title-wrapper').css('background-position', '50% '+offsetP+"%");
+        }
+        var featuresTop = $('.features-wrapper').offset().top;
+        var featuresHeight = $('.features-wrapper').height();
+        var fColorR = 126;
+        var fColorG = 166;
+        var fColorB = 189;
+        var sColorR = 239;
+        var sColorG = 177;
+        var sColorB = 3;
+        var oColorR = fColorR - sColorR;
+        var oColorG = fColorG - sColorG;
+        var oColorB = fColorB - sColorB;
+        if (scrollTop + windowHeight > featuresTop) {
+            var offset = scrollTop + windowHeight - featuresTop;
+            var offsetP = offset / featuresHeight;
+            var colorR = fColorR - oColorR * offsetP;
+            var colorG = fColorG - oColorG * offsetP;
+            var colorB = fColorB - oColorB * offsetP;
+            $('.features-wrapper').css('background-color', 'rgb('+colorR+','+colorG+','+colorB+")");
+        }
+        var screensTop = $('.screens-wrapper').offset().top;
+        if (scrollTop + windowHeight > screensTop) {
+            $('.screens-wrapper ul li').each(function(){
+                var liTop = $(this).offset().top;
+                if (scrollTop + windowHeight > liTop) {
+                    $(this).css('marginTop', 0);
+                } else {
+                    $(this).css('marginTop', screensItemMargin);
+                }
+            });
+        }
+        requestAnimationFrame(parallax);
+    }
+    $(document).ready(function(){
+        $('.screens-wrapper ul li').css('marginTop', screensItemMargin);
+        requestAnimationFrame(parallax);
+    });
+}
+</script>
 </body>
 </html>
