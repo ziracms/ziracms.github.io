@@ -50,6 +50,7 @@
     color: #000;
     font-size: 150%;
     background: #efb103 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
+    text-shadow: 0px 1px 1px #fff;
 }
 .screens-wrapper {
     background-color: #060205;
@@ -283,6 +284,8 @@ blockquote {
 <script src="/assets/js/lightbox.min.js"></script>
 <script type="text/javascript">
 if (typeof requestAnimationFrame != "undefined") {
+    var titlePaddingTop = 0;
+    var titleStartHeight = 0;
     var screensItemMargin = 100;
     function parallax() {
         var scrollTop = $(window).scrollTop();
@@ -291,8 +294,17 @@ if (typeof requestAnimationFrame != "undefined") {
         var titleHeight = $('.title-wrapper').height();
         if (scrollTop + windowHeight > titleTop) {
             var offset = scrollTop + windowHeight - titleTop - 3*titleHeight;
-            var offsetP = offset * 100 / titleHeight * .5;
-            $('.title-wrapper').css('background-position', '50% '+offsetP+"%");
+            var offsetP = offset * 100 / (titleHeight * 3);
+            if (offsetP < titleHeight) {
+                $('.title-wrapper').css('background-position', '50% '+offsetP+"%");
+            }
+            if (titlePaddingTop > 0 && titleStartHeight > 0) {
+                var padding = scrollTop + windowHeight - titleTop - titleStartHeight;
+                var paddingP = titlePaddingTop + (padding / titleStartHeight) * titlePaddingTop;
+                if (paddingP < titlePaddingTop * 3) {
+                    $('.title-wrapper').css('paddingTop', paddingP);
+                }
+            }
         }
         var featuresTop = $('.features-wrapper').offset().top;
         var featuresHeight = $('.features-wrapper').height();
@@ -327,6 +339,8 @@ if (typeof requestAnimationFrame != "undefined") {
         requestAnimationFrame(parallax);
     }
     $(document).ready(function(){
+        titlePaddingTop = parseInt($('.title-wrapper').css('paddingTop'));
+        titleStartHeight = parseInt($('.title-wrapper').height());
         $('.screens-wrapper ul li').css('marginTop', screensItemMargin);
         requestAnimationFrame(parallax);
     });
