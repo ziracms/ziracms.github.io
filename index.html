@@ -38,6 +38,7 @@
     height: 80px;
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 60px;
 }
 #welcome-screen {
     position: relative;
@@ -54,35 +55,35 @@
     padding: 20px 0px;
 }
 .zira-title-wrapper {
-    padding: 40px 0px 80px;
-    color: #000;
+    padding: 80px 0px 40px;
+    color: #fff;
     font-size: 130%;
-    background: #f2f525 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
-    text-shadow: 0px 1px 1px #fff;
+    background: #900042 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
+    text-shadow: 0px 1px 1px #000;
 }
 .title-wrapper {
     /*    background-color: #efb103;*/
-    padding: 40px 0px 80px;
-    color: #000;
+    padding: 80px 0px 40px;
+    color: #fff;
     font-size: 130%;
-    background: #efb103 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
-    text-shadow: 0px 1px 1px #fff;
+    background: #599000 url(/uploads/editor/wallpaper.png) no-repeat 50% -100%;
+    text-shadow: 0px 1px 1px #000;
 }
-.zira-title-wrapper a:link,
-.zira-title-wrapper a:visited,
-.title-wrapper a:link,
-.title-wrapper a:visited {
-    color: #333;
+.zira-title-wrapper h1 a:link,
+.zira-title-wrapper h1 a:visited,
+.title-wrapper h1 a:link,
+.title-wrapper h1 a:visited {
+    color: #fff;
     text-decoration: none;
 }
-.zira-title-wrapper a:hover,
-.title-wrapper a:hover {
-    color: #6e00ff;
+.zira-title-wrapper h1 a:hover,
+.title-wrapper h1 a:hover {
+    color: #fb07ff;
 }
 .zira-cms-download-btn:link,
 .zira-cms-download-btn:visited {
-    font-size: 200%;
-    padding: 30px 60px;
+    font-size: 150%;
+    padding: 20px 70px;
     border-radius: 40px;
     font-weight: bold;
 }
@@ -107,6 +108,14 @@ blockquote {
     color: #000;
     font-size: 150%;
     margin-bottom: 50px;
+}
+@media only screen and (max-width:767px){
+    .zira-title-wrapper,
+    .title-wrapper,
+    .zira-cms-download-btn:link,
+    .zira-cms-download-btn:visited {
+        font-size: 100%;
+    }
 }
 </style>
 <!--[if lt IE 9]><script src="/assets/js/html5shiv.min.js"></script><script src="/assets/js/respond.min.js"></script><![endif]-->
@@ -155,6 +164,9 @@ blockquote {
 </div>
 <p>Zira CMS привносит возможности рабочего стола в ваш сайт. Удобный и понятный оконный интерфейс позволит без труда разобраться в управлении даже новичку.</p>
 <p>Открывайте несколько окон параллельно, сворачивайте или разворачивайте их на весь экран. В общем работайте так, как вы привыкли это делать на своём десктопе.</p>
+<div class="zira-editor-download-wrapper">
+<a href="/details.html" class="zira-cms-download-btn">Подробнее</a>
+</div>
 </div>
 </div>
 <div class="demo-wrapper">
@@ -171,6 +183,9 @@ blockquote {
 </div>
 <p>Если Вы ищете альтернативу Geany для KDE, Вы должны попробовать Zira Editor.</p>
 <p>Zira Editor - это лёгкий и быстрый PHP редактор для Linux, Android и Raspberry Pi с подсветкой синтаксиса и авто-дополнением.</p>
+<div class="zira-editor-download-wrapper">
+<a href="/editor/ru/index.html" class="zira-cms-download-btn">Подробнее</a>
+</div>
 </div>
 </div>
 </div>
@@ -287,6 +302,7 @@ blockquote {
 </script>
 <script type="text/javascript">
 if (typeof requestAnimationFrame != "undefined") {
+    var ziraTitlePaddingTop = 0;
     var titlePaddingTop = 0;
     var titleStartHeight = 0;
     function parallax() {
@@ -307,10 +323,10 @@ if (typeof requestAnimationFrame != "undefined") {
             if (offsetP < titleHeight) {
                 $('.zira-title-wrapper').css('background-position', '50% '+offsetP+"%");
             }
-            if (titlePaddingTop > 0 && titleStartHeight > 0) {
+            if (ziraTitlePaddingTop > 0 && titleStartHeight > 0) {
                 var padding = scrollTop + windowHeight - titleTop - titleStartHeight;
-                var paddingP = titlePaddingTop + (padding / titleStartHeight) * titlePaddingTop;
-                if (paddingP < titlePaddingTop * 3) {
+                var paddingP = ziraTitlePaddingTop + (padding / titleStartHeight) * ziraTitlePaddingTop;
+                if (paddingP < ziraTitlePaddingTop * 3) {
                     $('.zira-title-wrapper').css('paddingTop', paddingP);
                 }
             }
@@ -334,6 +350,7 @@ if (typeof requestAnimationFrame != "undefined") {
         requestAnimationFrame(parallax);
     }
     $(document).ready(function(){
+        ziraTitlePaddingTop = parseInt($('.zira-title-wrapper').css('paddingTop'));
         titlePaddingTop = parseInt($('.title-wrapper').css('paddingTop'));
         titleStartHeight = parseInt($('.title-wrapper').height());
         requestAnimationFrame(parallax);
