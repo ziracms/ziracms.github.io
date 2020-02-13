@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/WebPage" lang="ru">
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="/assets/images/zira.png" />
@@ -44,7 +44,7 @@
     position: relative;
     height: 100%;
     background: #751601;
-    transition: background-color 3s linear;
+    transition: background-color 10s linear;
 }
 .demo-wrapper {
     background-color: #222628;
@@ -252,13 +252,9 @@ The most user-friendly content management system
             'top': ($(window).height() - imgHeight)/2
         }).data('top', ($(window).height() - imgHeight)/2);
         $('img#zira-project-img').css('opacity', 1);
-        $('#welcome-screen').data('bgColor', '#751601');
+        $('#welcome-screen').css('backgroundColor', '#387501');
+        $('#welcome-screen').data('bgColor', '#387501');
         setInterval(function(){
-            if (parseInt($('img#zira-project-img').css('opacity')) == 1) {
-                $('img#zira-project-img').css('opacity', .3);
-            } else {
-                $('img#zira-project-img').css('opacity', 1);
-            }
             if ($('#welcome-screen').data('bgColor') == '#751601') {
                 $('#welcome-screen').css('backgroundColor', '#387501');
                 $('#welcome-screen').data('bgColor', '#387501');
@@ -272,7 +268,7 @@ The most user-friendly content management system
                 $('#welcome-screen').css('backgroundColor', '#751601');
                 $('#welcome-screen').data('bgColor', '#751601');
             }
-        }, 5000);
+        }, 10000);
     };
 
     $(window).resize(function(){
